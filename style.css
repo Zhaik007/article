@@ -1,0 +1,249 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 24px;
+  }
+
+  .info {
+    width: 25%;
+  }
+
+  .info-wrapper {
+    justify-content: space-around;
+  }
+
+  .news {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  * {
+    font-size: 20px;
+  }
+
+  .info {
+    width: 50%;
+  }
+
+  .news {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 767px) {
+  .info {
+    width: 50%;
+  }
+
+  .news {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    width: 100%;
+  }
+
+  .news {
+    width: 100%;
+  }
+}
+
+.news{
+  text-align: center;
+  border-radius: 8px;
+  margin:0.1rem;
+  padding: 0.3rem;
+}
+
+.news img{
+  width:80%;border-radius:8px;
+  height: 10rem;
+  object-fit:cover;
+}
+.news a{
+  text-decoration: none;
+  color: #000;
+}
+
+.news:hover{
+  background: #c4e8fd;
+}
+
+body {
+  background: #ecf6fc;
+}
+
+main {
+  padding: 1rem;
+
+  max-width: 1100px;
+  min-width: 300px;
+  margin: auto;
+}
+
+h2 {
+  display: inline;
+  color: #06b0ff;
+  padding: 20px 0;
+  width: inherit;
+  font-size: 1.5rem;
+}
+
+p {
+  padding: 10px 0;
+  width: inherit;
+}
+
+.container {
+  width: 100%;
+  user-select: none;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #000;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  color: #199ae5;
+  background-color: #cfebfa;
+  display: block;
+  width: fit-content;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: rgba(66, 66, 218, 0.1);
+  border-radius: 10px;
+  font-size: 0.7rem;
+}
+
+.sdg-wrapper {
+  display: inline-flex;
+  float: right;
+}
+
+.sdg {
+  display: block;
+}
+
+.sdg img {
+  margin-top: 20%;
+  margin-right: 0.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  right: 0px;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;  
+}
+
+footer {
+  background: #010a1b;
+  padding: 1rem;
+  color: #dfe6e8b8;
+  min-width: 300px;
+  overflow: hidden;
+  margin: auto;
+  font-size: 1rem;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.info {
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+  padding: 0.3rem;
+}
+
+.social i {
+  color: #dfe6e8b8;
+  font-size: 2rem;
+}
+
+.social {
+  gap: 3rem;
+}
+
+.social ul {
+  display: flex;
+}
+
+footer a {
+  color: #dfe6e8b8;
+  text-decoration: none;
+}
+
+.vk :hover {
+  color: #0177ff;
+}
+
+.insta :hover {
+  color: #ea277e;
+}
+
+.linkedin :hover {
+  color: #0a63bc;
+}
+
+.whats :hover {
+  color: #24cc63;
+}
+
+.telega :hover {
+  color: #28a4e4;
+}
+
+.utube :hover {
+  color: #f70000;
+}
+
+.strava :hover {
+  color: #f65b00;
+}
+
+.chess :hover {
+  color: #7eaf4a;
+}
+
+.spotify :hover {
+  color: #1dd05d;
+}
+
+.github :hover {
+  color: #fff;
+}
