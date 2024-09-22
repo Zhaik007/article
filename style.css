@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/* Delete soon*/
+.voting {
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 20px;
+  margin-top: 40px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 59, 131, 1) 0%,
+    rgba(232, 61, 75, 1) 23%,
+    rgba(232, 61, 75, 1) 43%,
+    rgba(236, 86, 79, 1) 58%,
+    rgba(238, 97, 80, 1) 100%
+  );
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +55,6 @@ hr {
   .news {
     width: auto;
   }
- 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -84,6 +102,8 @@ hr {
 
 .news-wrapper {
   padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
 }
 
 ::-webkit-scrollbar {
@@ -202,14 +222,15 @@ label {
 
 .news img {
   width: 93%;
-  height:93%;
+  height: 93%;
   border-radius: 8px;
   object-fit: cover;
   object-position: center;
   transition: 0.5s;
 }
 
-.news a {
+.news a,
+.partner a {
   text-decoration: none;
   color: #000;
 }
@@ -219,11 +240,31 @@ label {
   transition: 0.5s;
   border-radius: 8px;
   width: 93%;
-  margin: auto;
 }
 
 .news:hover {
   background: #d0ecfc;
+}
+
+.partner {
+  border-radius: 1rem;
+  text-align: center;
+  width: 5rem;
+}
+
+.partner h4 {
+  margin-bottom: auto;
+}
+
+.partner img {
+  border-radius: 50%;
+  width: 5rem;
+  filter: grayscale(1);
+  transition: 0.7s;
+}
+
+.partner img:hover {
+  filter: none;
 }
 
 footer {
@@ -252,6 +293,10 @@ li {
   padding: 0.3rem;
 }
 
+ol li {
+  list-style: decimal;
+  margin-left: 1rem;
+}
 .social i {
   color: #dfe6e8b8;
   font-size: 2rem;
@@ -268,6 +313,11 @@ li {
 footer a {
   color: #dfe6e8b8;
   text-decoration: none;
+  transition: 0.2s;
+}
+
+footer a:hover {
+  color: #fff;
 }
 
 .vk :hover {
