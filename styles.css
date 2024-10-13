@@ -436,16 +436,19 @@ main {
     background-color: #39b3ff;
   }
 
-  .dropdown__subitem .dropdown__sublink {
-    margin-left: 1rem;
+  .dropdown__link {
+    margin-left:1rem;
+  }
+
+  .dropdown__sublink {
+    margin-left: 2rem;
   }
 
   .dropdown__item:hover .dropdown__menu {
     display: contents;
   }
 
-  .dropdown__item:hover .dropdown__menu,
-  .dropdown__subitem,.dropdown__link {
+  .dropdown__item:hover .dropdown__link {
     margin-left: 1rem;
   }
 
@@ -453,6 +456,7 @@ main {
     display: contents;
   }
 }
+
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;
