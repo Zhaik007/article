@@ -239,9 +239,6 @@ main {
 }
 
 /*=============== NAV ===============*/
-.nav {
-  height: 2.5rem;
-}
 
 .nav__link {
   font-family: "Montserrat", sans-serif;
@@ -253,10 +250,10 @@ main {
 }
 
 .nav__data {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 110;
 }
 
 .nav__logo {
@@ -285,7 +282,8 @@ main {
   height: max-content;
   inset: 0;
   margin: auto;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
+  margin-right: 1rem;
   cursor: pointer;
   transition: opacity 0.1s, transform 0.4s;
 }
@@ -296,9 +294,6 @@ main {
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
-  .nav {
-    height: 3.5rem;
-  }
 
   .plus {
     display: contents;
@@ -307,21 +302,27 @@ main {
   .nav__menu {
     position: absolute;
     left: 0;
-    top: 2.5rem;
     width: 100%;
-    height: calc(100vh - 2.5rem);
     overflow: auto;
+    height: 100%;
     pointer-events: none;
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
   }
+
+  .show-menu{
+    height:90vh;
+  }
+
   .nav__menu::-webkit-scrollbar {
     width: 0;
     display: none;
   }
   .nav__list {
     background-color: #28abfd;
+    z-index: 100;
     padding-top: 1rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -339,7 +340,6 @@ main {
 /* Show menu */
 .show-menu {
   opacity: 1;
-  top: 3.5rem;
   pointer-events: initial;
 }
 
@@ -390,7 +390,7 @@ main {
 
 .dropdown__menu,
 .dropdown__submenu {
-  max-height: 1000px;
+  max-height: 1100px;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
 }
@@ -398,7 +398,7 @@ main {
 /* Show dropdown menu & submenu */
 .dropdown__item:hover .dropdown__menu,
 .dropdown__subitem:hover > .dropdown__submenu {
-  max-height: 1000px;
+  max-height: 1100px;
   transition: max-height 0.4s ease-in;
 }
 
@@ -420,13 +420,25 @@ main {
 /* For small devices */
 
 @media screen and (max-width: 1118px) {
+  .nav {
+    height: calc(var(--header-height) + 3rem);
+    font-size: 1.5rem;
+  }
+
+  .nav img{
+    width:6rem;
+  }
+
   .dropdown__sublink,
   .nav__link,
   .dropdown__link,
   .dropdown__sublink,
   .nav__list {
     background-color: rgb(21, 25, 40);
-    height: 100%;
+  }
+
+  .navlist{
+    height: calc(100vh - var(--header-height)-3.4rem);
   }
 
   .dropdown__item {
