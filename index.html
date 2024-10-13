@@ -1,59 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jastyq_korpeshka</title>
   <link rel="icon" href="logo/logo.png" type="image/icon type" />
-  <meta name="keywords" content="Ecology,Plastic,Pollution,Contamination,Cartoons,Animated series" />
+  <meta name="keywords" content="Ecology,Plastic,Pollution,Contamination,Climate change,Environment,Cartoons,Animated series" />
   <meta name="description"
     content="Подборка анимационных сериалов нашего детсва в которых затрагивалась тема экологии" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!--=============== CSS ===============-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <!-- Swiper js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css">
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function (m, e, t, r, i, k, a) {
-      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-      m[i].l = 1 * new Date();
-      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(98048280, "init", {
-      clickmap: true,
-      trackLinks: true,
-      accurateTrackBounce: true,
-      webvisor: true
-    });
-  </script>
-  <noscript>
-    <div><img loading="lazy" src="https://mc.yandex.ru/watch/98048280" style="position:absolute; left:-9999px;"></div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
+  <link rel="stylesheet" href="styles.css">
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
 </head>
 
 <body>
-  <main>
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <nav class="nav ">
+      <div class="nav__data">
+        <a href="#" class="nav__logo">
+          <img src="../logo/Лого.png" alt="">
+        </a>
 
-    <div style="text-align:center; margin:20px auto;">
-      <a href="https://award-qazvolunteer.kz/" aria-label="RU" style="display:block">
-        <img src="logo/mincult.png" loading="lazy" width="100%">
-      </a>
-      <h1 style="font-size: 1.5rem; width: fit-content">Проголосуй за меня в номинации "Вклад в сохранении и защиту
-        окружающей среды" Международной премии Волонтер года - 2024 </h1>
-      <img src="vote.png" width="100%" alt="">
-      <h1>Толеубеков Жасулан Ерланович</h1>
-      <a class="voting"
-        href="https://award-qazvolunteer.kz/index.php/qorshaghan-ortany-saqtaw-zhaene-qorghaw-ueshin-qosqan-uelesi-ueshin/">Проголосовать</a>
-    </div>
-    <hr>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+
+          <li><a href="zhasulan.html" class="nav__link">Обо мне</a></li>
+
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <a href="#collect" class="nav__link">
+              Подборки<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </a>
+
+            <ul class="dropdown__menu ">
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem ">
+                <div class="dropdown__link">
+                  <i class="ri-archive-stack-fill"></i> Медиатека 
+                    <i class="ri-add-line dropdown__add "></i>
+                </div>
+
+                <ul class="dropdown__submenu ">
+                  <li>
+                    <a href="babies.html" class="dropdown__sublink">
+                      <i class="ri-parent-fill"></i> Для детей
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="ecokids.html" class="dropdown__sublink">
+                      <i class="ri-git-repository-fill"></i>Познавательные
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="index.html" class="dropdown__sublink">
+                      <i class="ri-emotion-laugh-fill"></i> Для подростков
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="teach.html" class="dropdown__sublink">
+                      <i class="ri-graduation-cap-fill"></i> Образовательные
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="films.html" class="dropdown__sublink">
+                      <i class="ri-user-2-fill"></i>Для взрослых
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="short.html" class="dropdown__sublink">
+                      <i class="ri-film-fill"></i> Короткометражные
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="anime.html" class="dropdown__sublink">
+                      <i class="ri-movie-fill"></i>Аниме
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="kazakh.html" class="dropdown__sublink">
+                      <i class="ri-flag-fill"></i>Отечественные
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="podcasts.html" class="dropdown__sublink">
+                      <i class="ri-voiceprint-fill"></i>Подкасты
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="movies.html" class="dropdown__sublink">
+                      <i class="ri-clapperboard-fill"></i>Мультфильмы
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="promo.html" class="dropdown__sublink">
+                      <i class="ri-advertisement-fill"></i>Промо ролики
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="soviet.html" class="dropdown__sublink">
+                      <i class="ri-folder-5-fill"></i>Старые мультики
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-team-fill"></i>Экосообщества
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-group-fill"></i>
+                  Экоактивисты
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="nav__link">
+              Материалы
+            </a>
+          </li>
+
+          <li><a href="#contacts" class="nav__link" target="">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
 
     <div style="display: flex; justify-content: center; align-items: center">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="25"
@@ -84,7 +190,7 @@
       <div class="sdg"><img src="sdg/14r.jpg"></div>
       <div class="sdg"><img src="sdg/16r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe src="https://www.youtube.com/embed/jAfKYyKg4GE?si=zn-6TCqDsHkoOHTM" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -119,7 +225,7 @@
         <img loading="lazy" src="sdg/14r.jpg">
       </div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe src="https://www.youtube.com/embed/1f8K0h6X8W0?si=f9I_mvo7IDjqTkF3" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -160,7 +266,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/13r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/aIaIz9osCPQ?si=Ai269xH3xpkw9pg7" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -194,7 +300,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/11r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/iZToswQHy-M?si=y_k0tckjE0jVUg24&amp;start=5"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -233,7 +339,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/17r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy"
         src="https://www.youtube.com/embed/videoseries?si=3dXQIYLc3UVbfkT2&amp;list=PLuhrB_7OzeSyie2dUCQwEdQo13fvtxx3m"
         frameborder="0"
@@ -276,7 +382,7 @@
       <div class="sdg"> <img loading="lazy" src="sdg/12r.jpg"> </div>
       <div class="sdg"> <img loading="lazy" src="sdg/15r.jpg"> </div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/Vt0gIf_vHb0?si=aZOc71BJ8LGaQt3t&amp;start=374"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -300,7 +406,7 @@
       <div class="sdg"> <img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"> <img loading="lazy" src="sdg/15r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/RmMcLBPelVc?si=JqGkG_S7fxsL2HSW&start=80"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -326,7 +432,7 @@
       <div class="sdg"> <img loading="lazy" src="sdg/10r.jpg"> </div>
       <div class="sdg"> <img loading="lazy" src="sdg/12r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/PTbsZHfDOOw?si=PVW7C2YR05f-dmGf" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -355,7 +461,7 @@
     <div class="sdg-wrapper">
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"> </div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/8pDaCU7kDvM?si=anWEoOoU8sLwq1fk" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -397,7 +503,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/11r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/af4e1uzmjic?si=es9RkLRldadI9oIu" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -426,7 +532,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/16r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/VFGQ4xHMM1I?si=8W8sHbE5_-62Tjd6" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -456,7 +562,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/fGxYTx9fRuA?si=2kdln_-C6xmX3AdR&amp;start=125"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -481,7 +587,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/akYElM3ZagY?si=Xc9UmHqr08yDG1eV" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -503,7 +609,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/yIzGOEJyMNg?si=Gb9p5DtnOy1XOGBI" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -535,7 +641,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <video id="html5video717860016"
         poster="https://static.tildacdn.com/tild6131-3830-4334-b233-313761363835/03_EP_HELPERS_OSTROV.png" controls=""
         style="object-fit: cover; height: 485.438px; width:100%;height:100%;">
@@ -569,7 +675,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/13r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/16r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/Y48dc_UtkP8?si=5zL6OrIs-hnvyUXM" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -604,7 +710,7 @@
     <div class="sdg-wrapper">
       <div class="sdg"><img loading="lazy" src="sdg/15r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" width="560" height="315"
         src="https://www.youtube.com/embed/i7nxpgIIqr4?si=AShAK1GxRj_JQ1ab" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -631,7 +737,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/15r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://vk.com/video_ext.php?oid=-100084161&id=456244377&hd=2" allowfullscreen
         allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0">
       </iframe>
@@ -649,7 +755,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/6r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://www.youtube.com/embed/z4FawIabw70?si=1TSyLO7viGShyHXw&amp;start=682"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -675,7 +781,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" src="https://vk.com/video_ext.php?oid=-155284657&id=456239957&hd=2"
         allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0"
         allowfullscreen></iframe>
@@ -695,7 +801,7 @@
       <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
       <div class="sdg"><img loading="lazy" src="sdg/16r.jpg"></div>
     </div>
-    <div class="container">
+    <div class="corobka">
       <iframe loading="lazy" frameborder="0" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"
         src="https://www.youtube.com/embed/videoseries?si=pvWj_x5OMzz0qx8A&amp;list=PLx-q60b_G45zN99WOZKtcEY103_fjEJhZ"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
@@ -707,27 +813,24 @@
     </div>
     <p>Китобойные судна отправляются на охоту у берегов Новой Зеландии. Но их планы расстраивает агент Ани!</p>
 
-
     <h2>Симпсоны - 8 сезон 21 серия (Лиза и Старик)</h2>
-    <div class="sdg-wrapper"></div>
-    <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
-    <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
+    <div class="sdg-wrapper">
+      <div class="sdg"><img loading="lazy" src="sdg/12r.jpg"></div>
+      <div class="sdg"><img loading="lazy" src="sdg/14r.jpg"></div>
     </div>
-    <div class="container">
-      <iframe loading="lazy" src="https://www.youtube.com/embed/J-QeTbmchvQ?si=nwgtsB8UCd8cFTyJ"
-        title="YouTube video player" frameborder="0"
+    <div class="corobka">
+      <iframe loading="lazy" src="https://www.youtube.com/embed/J-QeTbmchvQ?si=nwgtsB8UCd8cFTyJ" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <!-- <a href="https://vk.com/@regreen_polytech-kak-simpsony-govoryat-o-problemah-ekologii">simpsons</a> -->
     </div>
-    <div class="theme"></div>
+    <div class="theme">
       <label>Переработка</label>
       <label>Живодерство</label>
     </div>
-    <p>
+    <p id="collect">
       Лиза заинтересована акцией по переработке вторсырья. Мистер Бёрнс, как самый богатый житель Спрингфилда,
-      специально
-      приглашенный Директором Скиннером в школу, отрицает факт пользы переработки вторсырья.
+      специально приглашенный Директором Скиннером в школу, отрицает факт пользы переработки вторсырья.
     </p>
 
     <h1 style="display:block;font-size:2rem;text-align:center;">Больше подобных подборок</h1>
@@ -867,9 +970,8 @@
               <p>…</p>
             </a>
           </div>
-
         </div>
-
+        <p></p>
         <div class="swiper-pagination">
         </div>
         <!-- If we need navigation buttons -->
@@ -883,13 +985,63 @@
       <div class="org-wrapper">
         <div class="news-wrapper swiper-wrapper">
 
-          <!-- 
           <div class="swiper-slide partner " id="series">
-            <a href="https://recyclebirge.kz/">
-              <h4>Recycle birge</h4>
-              <div class="kartinka">
-                <img loading="lazy" src="logo/recycle.jpg">
-              </div>
+            <a href="https://ecosen.kz/">
+              <h4>
+                <pre>Ecosen
+                       </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ecosen.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.undp.org/ru/kazakhstan">
+              <h4>
+                <pre>UNDP
+                   </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/undp.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ecocashback.kz/">
+              <h4>
+                <pre>Eco
+     cashback</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ecocashback.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ekofond.kz/">
+              <h4>
+                <pre>ОФ ЭкоФонд
+                       </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ecofond.jfif"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.linkedin.com/company/united-central-asian-professional-ucap/">
+              <h4>
+                <pre>UCAP
+     team</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ucap.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://econetwork.green/">
+              <h4>
+                <pre>Eco
+     Network</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/econetwork.png"></div>
             </a>
           </div>
 
@@ -901,36 +1053,6 @@
           </div>
 
           <div class="swiper-slide partner " id="series">
-            <a href="https://www.acbk.kz/">
-              <h4>
-                <pre>    АСБК              
-                </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/acbk.jfif"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.linkedin.com/company/united-central-asian-professional-ucap/">
-              <h4>
-                <pre>UCAP
-team</pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/ucap.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://ecosen.kz/">
-              <h4>
-                <pre>Ecosen
-                  </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/ecosen.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
             <a href="https://www.instagram.com/youth4climatekz/">
               <h4>Youth for Climate</h4>
               <div class="kartinka"><img loading="lazy" src="logo/youtclimate.jpg"></div>
@@ -938,195 +1060,186 @@ team</pre>
           </div>
 
           <div class="swiper-slide partner " id="series">
-            <a href="https://www.instagram.com/lcoy_kazakhstan/">
-              <h4>
-                <pre>LCOY
-                </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/lcoy.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.unsdsn.org/our-networks/kazakhstan/">
-              <h4>
-                <pre>SDSN
-                </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/sdsn.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.usaid.gov/ru/central-asia-regional">
-              <h4>
-                <pre>USAID
-              </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/usaid.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://ecocashback.kz/">
-              <h4>
-                <pre>Eco
-cashback</pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/ecocashback.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://kaz-waste.kz/">
-              <h4>
-                <pre>Kazwaste
-              </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/kazwaste.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.undp.org/ru/kazakhstan">
-              <h4>
-                <pre>UNDP
-              </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/undp.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://plastnet.kz/">
-              <h4>
-                <pre>Plastnet
-              </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/plastnet.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://impacthubalmaty.net/">
-              <h4>
-                <pre>Impacthub
-              </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/impacthub.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://kazakhstan.fes.de/">
-              <h4>
-                <pre>FES
-              </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/fes.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.eurasia.org/who-we-are/eurasia-foundation-of-central-asia/">
-              <h4>
-                <pre>Eurasia
-Foundation</pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/EF.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.instagram.com/climate.centralasia/">
-              <h4>
-                <pre>CAICA
-  </pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/caica.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
             <a href="https://www.instagram.com/p/C_95jgTC_ih/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
               <h4>
                 <pre>Департамент
-Экологии</pre>
+     Экологии</pre>
               </h4>
               <div class="kartinka"><img loading="lazy" src="logo/department.jpg"></div>
             </a>
           </div>
 
           <div class="swiper-slide partner " id="series">
-            <a href="https://open-almaty.kz/">
+            <a href="https://taplink.cc/taza.likee">
               <h4>
-                <pre>Open
-Almaty</pre>
+                <pre>  Taza.likee
+        </pre>
               </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/open_alma.jpg"></div>
+              <div class="kartinka"><img loading="lazy" src="logo/tazalike.jpg"></div>
             </a>
           </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://www.gov.kz/memleket/entities/almaty?lang=en">
-              <h4>
-                <pre>Akimat
-Almaty</pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/almaty.jpeg"></div>
-            </a>
-          </div>
-
-         <div class="swiper-slide partner " id="series">
-          <a href="">
-            <h4> 
-              <pre>  
-Almaty</pre>  
-            </h4>
-            <div class="kartinka"><img loading="lazy" src="logo/alma.jpg"></div>
-          </a>
+          <!-- 
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://recyclebirge.kz/">
+                   <h4>Recycle birge</h4>
+                   <div class="kartinka">
+                     <img loading="lazy" src="logo/recycle.jpg">
+                   </div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.acbk.kz/">
+                   <h4>
+                     <pre>    АСБК              
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/acbk.jfif"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.instagram.com/lcoy_kazakhstan/">
+                   <h4>
+                     <pre>LCOY
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/lcoy.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.unsdsn.org/our-networks/kazakhstan/">
+                   <h4>
+                     <pre>SDSN
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/sdsn.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.usaid.gov/ru/central-asia-regional">
+                   <h4>
+                     <pre>USAID
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/usaid.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kaz-waste.kz/">
+                   <h4>
+                     <pre>Kazwaste
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/kazwaste.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://plastnet.kz/">
+                   <h4>
+                     <pre>Plastnet
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/plastnet.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://impacthubalmaty.net/">
+                   <h4>
+                     <pre>Impacthub
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/impacthub.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kazakhstan.fes.de/">
+                   <h4>
+                     <pre>FES
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/fes.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.eurasia.org/who-we-are/eurasia-foundation-of-central-asia/">
+                   <h4>
+                     <pre>Eurasia
+     Foundation</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/EF.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.instagram.com/climate.centralasia/">
+                   <h4>
+                     <pre>CAICA
+       </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/caica.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://open-almaty.kz/">
+                   <h4>
+                     <pre>Open
+     Almaty</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/open_alma.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.gov.kz/memleket/entities/almaty?lang=en">
+                   <h4>
+                     <pre>Akimat
+     Almaty</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/almaty.jpeg"></div>
+                 </a>
+               </div>
+     
+              <div class="swiper-slide partner " id="series">
+               <a href="">
+                 <h4> 
+                   <pre>  
+     Almaty</pre>  
+                 </h4>
+                 <div class="kartinka"><img loading="lazy" src="logo/alma.jpg"></div>
+               </a>
+             </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kameda.kz/">
+                   <h4>
+                     <pre>Kameda
+     PF</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/kameda.jpg"></div>
+                 </a>
+               </div>
+     
+              -->
         </div>
 
-          <div class="swiper-slide partner " id="series">
-            <a href="https://econetwork.green/">
-              <h4>
-                <pre>Eco
-Network</pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/econetwork.png"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-            <a href="https://kameda.kz/">
-              <h4>
-                <pre>Kameda
-PF</pre>
-              </h4>
-              <div class="kartinka"><img loading="lazy" src="logo/kameda.jpg"></div>
-            </a>
-          </div>
-
-          <div class="swiper-slide partner " id="series">
-          <a href="https://taplink.cc/taza.likee">
-            <h4>
-              <pre>  Taza.likee
- </pre>
-            </h4>
-            <div class="kartinka"><img loading="lazy" src="logo/tazalike.jpg"></div>
-          </a>
-        </div> -->
-
-        </div>
-
-        <div class="swiper-pagination">
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
   </main>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/09e0948662.js" crossorigin="anonymous"></script>
+  <!--=============== MAIN JS ===============-->
+  <script src="main.js"></script>
 </body>
 
 <footer>
@@ -1166,7 +1279,9 @@ PF</pre>
       </div>
     </div>
     <div class="info">
-      <h3>Обо мне</h3>
+      <h3>
+        <a href="zhasulan.html" style="text-decoration: none;">Обо мне</a>
+      </h3>
       <ul>
         <li>
           <a
@@ -1183,7 +1298,7 @@ PF</pre>
       </ul>
     </div>
     <div class="info">
-      <h3>Контакты</h3>
+      <h3 id="contacts">Контакты</h3>
       <ul>
         <li>
           <a href="https://2gis.kz/astana/geo/9570771978420226" target="_blank">
@@ -1240,5 +1355,4 @@ PF</pre>
     </div>
   </div>
 </footer>
-
 </html>

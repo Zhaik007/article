@@ -11,3 +11,65 @@
         <p>
 
         </p>
+
+
+
+
+
+
+
+        <h2></h2>
+        <div class="sdg-wrapper">
+          <div class="sdg"> <img loading="lazy" src="sdg/12r.jpg"> </div>
+        </div>
+        <div class="container" style="height:46rem;">
+    
+        </div>
+
+        <p>
+        </p>
+
+
+
+
+            <!-- 
+    <div style="text-align:center; margin:20px auto;">
+      <a href="https://award-qazvolunteer.kz/" aria-label="RU" style="display:block">
+        <img src="logo/mincult.png" loading="lazy" width="100%">
+      </a>
+      <h1 style="font-size: 1.5rem; width: fit-content">Проголосуй за меня в номинации "Вклад в сохранении и защиту
+        окружающей среды" Международной премии Волонтер года - 2024 </h1>
+      <img src="vote.png" width="100%" alt="">
+      <h1>Толеубеков Жасулан Ерланович</h1>
+      <a class="voting"
+        href="https://award-qazvolunteer.kz/index.php/qorshaghan-ortany-saqtaw-zhaene-qorghaw-ueshin-qosqan-uelesi-ueshin/">Проголосовать</a>
+    </div>
+    <hr> -->
+
+
+              <!--=============== DROPDOWN 2 ===============-->
+          <!-- <li class="dropdown__item">
+            <div class="nav__link">
+              Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-user-line"></i> Profiles
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-lock-line"></i> Accounts
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-message-3-line"></i> Напишите мне
+                </a>
+              </li>
+            </ul>
+          </li> -->
