@@ -1,6 +1,6 @@
         <h2> </h2>
         <div class="sdg-wrapper">
-            <div class="sdg"> <img loading="lazy" src="sdg/12r.jpg"> </div>
+            <div class="sdg"> <img loading="lazy" src="sdg/12r.png"> </div>
         </div>
         <div class="container">
 
@@ -15,12 +15,41 @@
 
 
 
+        <h2>
+        </h2>
+        <div class="sdg-wrapper">
+          <div class="sdg"> <img loading="lazy" src="sdg/12r.png"> </div>
+        </div>
+        <div class="corobka">
+    
+        </div>
+        <div class="theme">
+          <label></label>
+        </div>
+        <p>
+    
+        </p>
 
-
-
+        <h2> </h2>
+        <div class="sdg-wrapper">
+          <div class="sdg"> <img loading="lazy" src="sdg/16r.png"> </div>
+        </div>
+        <div class="corobka">
+          <iframe loading="lazy" 
+          frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen;"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="theme">
+          <label></label>
+        </div>
+        <p>
+    
+        </p>
+        
         <h2></h2>
         <div class="sdg-wrapper">
-          <div class="sdg"> <img loading="lazy" src="sdg/12r.jpg"> </div>
+          <div class="sdg"> <img loading="lazy" src="sdg/12r.png"> </div>
         </div>
         <div class="container" style="height:46rem;">
     

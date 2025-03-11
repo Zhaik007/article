@@ -1,0 +1,2329 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>jastyq_korpeshka</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="logo/logo.png" type="image/icon type" />
+  <meta name="keywords" content="Ecology,Plastic,Pollution,Contamination,Cartoons,Animated series,Climate change," />
+  <meta name="description" content="Мультфильмы про войну" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <!-- Swiper js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+  <!-- Link to Font Awesome  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <style>
+
+    .quiz-container {
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .number {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .options button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .options button:hover {
+      background-color: #0056b3;
+    }
+
+    .options button.correct {
+      background-color: #28a745;
+    }
+
+    .options button.incorrect {
+      background-color: #dc3545;
+    }
+
+    @import url(https://fonts.bunny.net/css?family=abel:400);
+
+    /* Hide radio buttons */
+    input[type="radio"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .sdgs {
+      --base-rotation: 0deg;
+      --full-circle: 360deg;
+      --items: 17;
+      --radius: 40vw;
+      --duration: 300ms;
+      --sdgs-container-size: calc(var(--radius) * 2);
+      --thumb-size: 30px;
+      --image-size: calc(var(--radius));
+      --image-y: 0%;
+      --labels-offset: calc(var(--radius) * -.95);
+      --title-top: calc(var(--thumb-size) * -3);
+      --info-top: calc(var(--image-size) * 1.3);
+
+      --info-width: 100%;
+
+      margin: 1.5rem auto;
+      inset: 0;
+      width: var(--sdgs-container-size);
+      height: var(--sdgs-container-size);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      perspective: 1000px;
+      transition: transform 0.3s ease-in-out var(--duration);
+      list-style: none;
+    }
+
+    .sdgs li {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      padding: 0;
+      transform-origin: center;
+      display: grid;
+      place-content: center;
+      transform: rotate(calc(var(--i) * 360deg / var(--items)));
+      pointer-events: none;
+    }
+    .sdgs li>label {
+      position: absolute;
+      inset: 0;
+      margin:auto;
+      transform: translateY(var(--labels-offset));
+      width: var(--thumb-size);
+      height: var(--thumb-size);
+      cursor: pointer;
+      pointer-events: initial;
+      /*outline: 1px dashed red;*/
+      transition: var(--duration) ease-in-out;
+      background-color: rgba(0, 0, 0,0);
+
+    }
+
+    /* thumbs */
+    .sdgs li>label>img {
+      transform-origin: center;
+      width: 100%;
+      opacity: var(--label-opacity, 1);
+      transition: scale var(--duration) ease-in-out,
+        opacity var(--duration) ease-in-out;
+    }
+
+
+    /* main image */
+    .sdgs>li>img {
+      width: var(--image-size);
+      height: var(--image-size);
+      object-fit: contain;
+      z-index: 52;
+      transform: translateY(-.9rem); 
+      transition-property: opacity, scale, width, height, transform, filter;
+      transition-duration: var(--duration);
+      transition-timing-function: ease-in-out;
+      transition-delay: var(--item-delay, 0ms), var(--item-delay, 0ms), 0ms, 0ms, 0ms,
+        0ms;
+      pointer-events: initial;
+      opacity: var(--item-opacity, 0);
+      scale: var(--item-scale, 0);
+      filter: drop-shadow(0px 0px 5px rgba(30, 26, 26, 0.25));
+    }
+
+    .sdgs>li:has(:checked)>img:hover {
+      transform: translateY(var(--image-y)) rotateY(-10deg) rotateX(-10deg);
+      transition-delay: 0ms;
+      filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.3));
+    }
+
+    .sdgs li h2,
+    .sdgs li p {
+      position: absolute;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%,0);
+      transform-origin: center;
+      width:calc(--image-size);
+    }
+    .sdgs li p {
+      transform: translate(-50%, 15%);
+      font-size: .9rem;
+    }
+
+    .sdgs>li>h2 {
+      top: var(--title-top);
+      opacity: var(--title-opacity, 0);
+      translate: 0 var(--title-y, -30px);
+      transition: var(--duration) ease-in-out var(--title-delay, 0ms);
+    }
+
+    .sdgs>li>p {
+      top: var(--info-top);
+      margin: 0 auto;
+      width: var(--info-width);
+      z-index: 2;
+      font-size: clamp(0.8rem, 3.5vw + 0.05rem, 1rem); 
+      text-wrap: balance;
+      opacity: var(--info-opacity, 0);
+      translate: 0 var(--info-y, 30px);
+      transition: var(--duration) ease-in-out var(--info-delay, 0ms);
+    }
+
+    /* update custom properties for checked item */
+    li:has(input:checked) {
+      --label-opacity: 0.25;
+      --label-scale: 1;
+      --item-scale: 1;
+      --item-opacity: 1;
+      --item-delay: calc(var(--duration) * 2);
+      --title-opacity: 1;
+      --title-y: 0;
+      --title-delay: calc(var(--duration) * 3);
+      --info-opacity: 1;
+      --info-y: 0;
+      --info-delay: calc(var(--duration) * 3);
+      /*outline: 1px dashed red;*/
+      z-index: 99;
+    }
+
+    /* rotate container based on checked radio */
+    .sdgs:has(input:checked) {
+      transform: rotate(calc(var(--base-rotation) - (var(--index) * var(--full-circle) / var(--items))));
+    }
+   
+
+    @media (max-width: 450px) {
+       /* thumbs */
+       /* thumbs */
+       .sdgs li>label>img {
+        scale: 5;
+      }
+      .sdgs:has(label:hover) label img {
+        scale: 5;
+      }
+      /* hovered thumb */
+      .sdgs li>label:hover img {
+        scale: 6;
+      }
+      .sdgs>li>h2 {
+        top: 1rem;
+      }
+      .sdgs>li>p {
+        width: 45vw;
+      }
+    }
+
+    @media (min-width: 450px) {
+      /* thumbs */
+      .sdgs li>label>img {
+       scale: 5;
+     }
+     .sdgs:has(label:hover) label img {
+       scale: 5;
+     }
+     /* hovered thumb */
+     .sdgs li>label:hover img {
+       scale: 6;
+     }
+   }
+
+   @media (min-width: 550px) {
+    /* thumbs */
+    .sdgs li>label>img {
+     scale: 6;
+   }
+   .sdgs:has(label:hover) label img {
+     scale: 6;
+   }
+   /* hovered thumb */
+   .sdgs li>label:hover img {
+     scale: 7;
+   }
+ }
+
+ @media (min-width: 550px) {
+  /* thumbs */
+  .sdgs li>label>img {
+   scale: 7;
+ }
+ .sdgs:has(label:hover) label img {
+   scale: 7;
+ }
+ /* hovered thumb */
+ .sdgs li>label:hover img {
+   scale: 8;
+ }
+ .sdgs>li>h2 {
+  top: 10vw;
+}
+.sdgs>li>p {
+  top: 60vw;
+}
+}
+    @media (min-width: 768px) {
+      .sdgs {
+        --radius: 20vw;
+        --thumb-size: 40px;
+        --title-top: 2rem;
+      }
+      .sdgs li>label>img {
+        transform-origin: center;
+        width: 100%;
+        scale: 2.8;
+        opacity: var(--label-opacity, 1);
+        transition: scale var(--duration) ease-in-out,
+          opacity var(--duration) ease-in-out;
+      }
+      .sdgs:has(label:hover) label img {
+        scale: 2.8;
+      }
+      /* hovered thumb */
+      .sdgs li>label:hover img {
+        scale: 3.6;
+      }
+
+      .sdgs>li>h2 {
+        top: 1vw;
+      }
+      .sdgs>li>p {
+        top: 24vw;
+        width:35vw;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .sdgs {
+        --radius: 19vw;
+        --thumb-size: 50px;
+        --image-y: -20%;
+        --info-width: min(100% - 2rem, 65%);
+        --info-top: calc(var(--image-size) * 1.3);
+      }
+      .sdgs li>label>img {
+        transform-origin: center;
+        width: 100%;
+        scale: 2.2;
+        opacity: var(--label-opacity, 1);
+        transition: scale var(--duration) ease-in-out,
+          opacity var(--duration) ease-in-out;
+      }
+      .sdgs:has(label:hover) label img {
+        scale: 2.2;
+      }
+      /* hovered thumb */
+      .sdgs li>label:hover img {
+        scale: 3.6;
+      }
+      .sdgs>li>h2 {
+        top: 3vw;
+      }
+      .sdgs>li>p {
+        top: 25vw;
+        width:20vw;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .sdgs {
+        --radius: 19vw;
+        --thumb-size: 50px;
+        --image-y: -20%;
+        --info-width: min(100% - 2rem, 65%);
+        --info-top: calc(var(--image-size) * 1.3);
+      }
+      .sdgs li>label>img {
+        transform-origin: center;
+        width: 100%;
+        scale: 3;
+        opacity: var(--label-opacity, 1);
+        transition: scale var(--duration) ease-in-out,
+          opacity var(--duration) ease-in-out;
+      }
+      .sdgs:has(label:hover) label img {
+        scale: 3;
+      }
+      /* hovered thumb */
+      .sdgs li>label:hover img {
+        scale: 3.6;
+      }
+      .sdgs>li>h2 {
+        top: 3vw;
+      }
+      .sdgs>li>p {
+        top: 25vw;
+        width:20vw;
+      }
+    }
+    .sdgs:has(input#item-1:checked) {
+      --index: 0;
+    }
+    .sdgs:has(input#item-2:checked) {
+      --index: 1;
+    }
+    .sdgs:has(input#item-3:checked) {
+      --index: 2;
+    }
+    .sdgs:has(input#item-4:checked) {
+      --index: 3;
+    }
+    .sdgs:has(input#item-5:checked) {
+      --index: 4;
+    }
+    .sdgs:has(input#item-6:checked) {
+      --index: 5;
+    }
+    .sdgs:has(input#item-7:checked) {
+      --index: 6;
+    }
+    .sdgs:has(input#item-8:checked) {
+      --index: 7;
+    }
+    .sdgs:has(input#item-9:checked) {
+      --index: 8;
+    }
+    .sdgs:has(input#item-10:checked) {
+      --index: 9;
+    }
+    .sdgs:has(input#item-11:checked) {
+      --index: 10;
+    }
+    .sdgs:has(input#item-12:checked) {
+      --index: 11;
+    }
+    .sdgs:has(input#item-13:checked) {
+      --index: 12;
+    }
+    .sdgs:has(input#item-14:checked) {
+      --index: 13;
+    }
+    .sdgs:has(input#item-15:checked) {
+      --index: 14;
+    }
+    .sdgs:has(input#item-16:checked) {
+      --index: 15;
+    }
+    .sdgs:has(input#item-17:checked) {
+      --index: 16;
+    }
+    .sdgs:has(input#item-18:checked) {
+      --index: 17;
+    }
+    .sdgs:has(input#item-19:checked) {
+      --index: 18;
+    }
+    h2{
+      color: black;
+    }
+    .randomizerBtn{
+    background-color:#328ff9;border-radius:10px;display:block;justify-self:center;color:aliceblue;border:none;padding:10px;margin:10px;cursor: pointer;
+    transition: scale 230ms ease-in-out;
+
+  }    .randomizerBtn:hover{
+      scale:1.2;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav ">
+      <div class="nav__data">
+        <a href="https://www.instagram.com/jasyl_kenistik/" class="nav__logo">
+          <img src="logo/Лого.png">
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Main</a></li>
+
+          <li><a href="zhasulan.html" class="nav__link">About</a></li>
+
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <a href="#collect" class="nav__link">
+              Collections<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </a>
+
+            <ul class="dropdown__menu">
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <i class="ri-archive-stack-fill"></i> Media <i class="ri-add-line dropdown__add"></i>
+                </div>
+
+                <ul class="dropdown__submenu">
+                  <li>
+                    <a href="babies.html" class="dropdown__sublink">
+                      <i class="ri-parent-fill"></i> For kids
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="ecokids.html" class="dropdown__sublink">
+                      <i class="ri-git-repository-fill"></i>Entartaining
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="index.html" class="dropdown__sublink">
+                      <i class="ri-emotion-laugh-fill"></i>TV Series
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="teach.html" class="dropdown__sublink">
+                      <i class="ri-graduation-cap-fill"></i>Educative
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="films.html" class="dropdown__sublink">
+                      <i class="ri-user-2-fill"></i>Films
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="short.html" class="dropdown__sublink">
+                      <i class="ri-film-fill"></i>Shortfilms
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="anime.html" class="dropdown__sublink">
+                      <i class="ri-movie-fill"></i>Anime
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="kazakh.html" class="dropdown__sublink">
+                      <i class="ri-flag-fill"></i>Kazakh
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="podcasts.html" class="dropdown__sublink">
+                      <i class="ri-voiceprint-fill"></i>Podcasts
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="movies.html" class="dropdown__sublink">
+                      <i class="ri-clapperboard-fill"></i>Movies
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="promo.html" class="dropdown__sublink">
+                      <i class="ri-advertisement-fill"></i>Promo 
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="soviet.html" class="dropdown__sublink">
+                      <i class="ri-folder-5-fill"></i>Old cartoons
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-team-fill"></i>Eco-communities
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-group-fill"></i>
+                  </i>Eco-activists
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Materials</a>
+          </li>
+          <li><a href="visitka.html" class="nav__link" target="">Contacts</a></li>
+          <li class="dropdown__item language">
+            <button id="cdrop" class="nav__link" style="border:none;" type="button">
+              ENG <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </button>
+            <ul class="dropdown__menu lang" id="langdrop">
+              <li>
+                <a href="#" class="dropdown__link">
+                  <img class="rounded inline-block align-middle" src="img/RU.png">
+                  <p>RU</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link">
+                  <img class="rounded inline-block align-middle" src="img/US.png">
+                  <p>ENG</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link">
+                  <img class="rounded inline-block align-middle" src="img/KZ.png">
+                  <p>KZ</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="article">
+    <h1 style="font-size: 2rem; width: fit-content; justify-self:center;">
+      Sustainable Development Goals
+    </h1>
+    <a class="author" href="https://www.instagram.com/jastyq_korpeshka/" title="Author ">by Toleubekov Zhassulan</a>
+
+    <div style="display:flex; align-items:center;justify-content:center;">
+      <ul class="sdgs-container sdgs">
+        <li style="--i: 0;">
+          <input type="radio" id="item-1" name="gallery-item">
+          <img src="sdg/sdg.png" style="scale: .9;">
+          <h2 style="color: #06b0ff;">SDG</h2>
+          <p>17 Goals to Transform Our World</p>
+        </li>
+        <li style="--i: 1;" >
+          <input type="radio" id="item-2" name="gallery-item">
+          <label for="item-2"><img src="sdg/01.png"></label>
+          <img src="sdg/01.png" loading="lazy">
+          <h2>Goal 1</h2> 
+          <p>End poverty in all it forms everywhere</p>
+        </li>
+        <li style="--i: 2;" >
+          <input type="radio" id="item-3" name="gallery-item">
+          <label for="item-3"><img src="sdg/02.png"></label>
+          <img src="sdg/02.png" loading="lazy">
+          <h2>Goal 2</h2>
+          <p>End hunger, promote sustainable agriculture </p>
+        </li>
+        <li style="--i: 3;" >
+          <input type="radio" id="item-4" name="gallery-item">
+          <label for="item-4"><img src="sdg/03.png"></label>
+          <img src="sdg/03.png" loading="lazy">
+          <h2>Goal 3</h2>
+          <p>Ensure health and well-being for all at all ages</p>
+        </li>
+        <li style="--i: 4;" >
+          <input type="radio" id="item-5" name="gallery-item">
+          <label for="item-5"><img src="sdg/04.png"></label>
+          <img src="sdg/04.png" loading="lazy">
+          <h2>Goal 4</h2>
+          <p>Ensure quality education for everyone </p>
+        </li>
+        <li style="--i: 5;" >
+          <input type="radio" id="item-6" name="gallery-item">
+          <label for="item-6"><img src="sdg/05.png"></label>
+          <img src="sdg/05.png" loading="lazy">
+          <h2>Goal 5</h2>
+          <p>Achieve gender equality for all women and girls</p>
+        </li>
+        <li style="--i: 6;" >
+          <input type="radio" id="item-7" name="gallery-item">
+          <label for="item-7"><img src="sdg/06.png"></label>
+          <img src="sdg/06.png" loading="lazy">
+          <h2>Goal 6</h2>
+          <p>Ensure clear sanitation and availability of water</p>
+        </li>
+        <li style="--i: 7;" >
+          <input type="radio" id="item-8" name="gallery-item">
+          <label for="item-8"><img src="sdg/07.png"></label>
+          <img src="sdg/07.png" loading="lazy">
+          <h2>Goal 7</h2>
+          <p>Affordable, reliable and clean energy for all </p>
+        </li>
+        <li style="--i: 8;" >
+          <input type="radio" id="item-9" name="gallery-item">
+          <label for="item-9"><img src="sdg/08.png"></label>
+          <img src="sdg/08.png" loading="lazy">
+          <h2>Goal 8</h2>
+          <p>Promote economic growth and workplaces for all</p>
+        </li>
+        <li style="--i: 9;" >
+          <input type="radio" id="item-10" name="gallery-item">
+          <label for="item-10"><img src="sdg/09.png"></label>
+          <img src="sdg/09.png" loading="lazy">
+          <h2>Goal 9</h2>
+          <p>Sustainable infrastructure and foster innovation</p>
+        </li>
+        <li style="--i: 10;" >
+          <input type="radio" id="item-11" name="gallery-item">
+          <label for="item-11"><img src="sdg/10.png"></label>
+          <img src="sdg/10.png" loading="lazy">
+          <h2>Goal 10 </h2>
+          <p>Reduce inequality within and among countries</p>
+        </li>
+        <li style="--i: 11;" >
+          <input type="radio" id="item-12" name="gallery-item">
+          <label for="item-12"><img src="sdg/11.png"></label>
+          <img src="sdg/11.png" loading="lazy">
+          <h2>Goal 11</h2>
+          <p>Make cities safe and resilient</p>
+        </li>
+        <li style="--i: 12;" >
+          <input type="radio" id="item-13" name="gallery-item">
+          <label for="item-13"><img src="sdg/12.png"></label>
+          <img src="sdg/12.png" loading="lazy">
+          <h2>Goal 12</h2>
+          <p>Consience consumption and production</p>
+        </li>
+        <li style="--i: 13;" >
+          <input type="radio" id="item-14" name="gallery-item">
+          <label for="item-14"><img src="sdg/13.png"></label>
+          <img src="sdg/13.png" loading="lazy">
+          <h2>Goal 13</h2>
+          <p>Take urgent action to climate change and its impacts</p>
+        </li>
+        <li style="--i: 14;" >
+          <input type="radio" id="item-15" name="gallery-item">
+          <label for="item-15"><img src="sdg/14.png"></label>
+          <img src="sdg/14.png" loading="lazy">
+          <h2>Goal 14</h2>
+          <p>Conservation and sustainable use of marine resources</p>
+        </li>
+        <li style="--i: 15;" >
+          <input type="radio" id="item-16" name="gallery-item">
+          <label for="item-16"><img src="sdg/15.png"></label>
+          <img src="sdg/15.png" loading="lazy">
+          <h2>Goal 15</h2>
+          <p>Protect, and restore life in terrestrial ecosystems</p>
+        </li>
+        <li style="--i: 16;" >
+          <input type="radio" id="item-17" name="gallery-item">
+          <label for="item-17"><img src="sdg/16.png"></label>
+          <img src="sdg/16.png" loading="lazy">
+          <h2>Goal 16</h2>
+          <p>Promote peace, justice and build effective institutions</p>
+        </li>
+        <li style="--i: 17;" >
+          <input type="radio" id="item-18" name="gallery-item">
+          <label for="item-18"><img src="sdg/17.png"></label>
+          <img src="sdg/17.png" loading="lazy">
+          <h2>Goal 17</h2>
+          <p>Strengthen the Global Partnership</p>
+        </li>
+      </ul>
+    </div>
+
+    <button class="randomizerBtn" >
+      Spin
+    </button>
+
+    <div class="quiz-container" style="overflow:hidden;">
+      <div id="question-area">
+        <img src="SGD.png" alt="" style="width:80px;height:80px;justify-self:center;">
+        <p class="question">Нажмите на кнопку выше, чтобы начать квиз!</p>
+      </div>
+      <img src="line.png" alt="" style="position:relative;left:-3em; bottom:-1.6em; width:120%;">
+
+    </div>
+
+    <h1 style="display:block;font-size:2rem;text-align:center;">Подборки</h1>
+    <div class="swiper">
+      <div class="slider-wrapper">
+        <div class="news-wrapper swiper-wrapper">
+
+          <div class="swiper-slide news " id="series">
+            <a href="index.html">
+              <h4 title="Читать далее…">
+                20 мультипликационных сериалов …
+              </h4>
+             
+               
+              <div class="kartinka"><img loading="lazy" src="posters/ben10.png"></div>
+              <p>Герои нашего детсва… </p>
+            </a>
+            <audio src="audio/ben10.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="movies">
+            <a href="movies.html">
+              <h4 title="Читать далее…">30 полнометражных мультфильмов …</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/eva.jpg"></div>
+              <p>Все мы знаем про Валли… </p>
+            </a>
+            <audio src="audio/wall.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="babies">
+            <a href="babies.html">
+              <h4 title="Читать далее…">70 эко-мультфильмов для малышей …</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/children.jpg"> </div>
+              <p>Всё начинается с детства…</p>
+            </a>
+            <audio src="audio/UNICEF.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="short">
+            <a href="short.html">
+              <h4 title="Читать далее…">85 короткометражных мультфильмов …</h4>
+              <div class="kartinka">
+                <img loading="lazy" src="posters/ocean.jpg">
+              </div>
+              <p>Меньше чем за 30 минут…</p>
+            </a>
+            <audio src="audio/purity.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="promo">
+            <a href="promo.html">
+              <h4 title="Читать далее…">30 промо роликов различных компаний …</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/lego.jpg"> </div>
+              <p>Pepsico, LEGO и другие…</p>
+            </a>
+            <audio src="audio/commercial.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="kazakh">
+            <a href="kazakh.html">
+              <h4 title="Әрі қарай оқу…">Экология туралы 30 бейнероликтер…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/kazakh.png"> </div>
+              <p>Қазақ тіліндегі табиғат…</p>
+            </a>
+            <audio src="audio/aldar.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="anime">
+            <a href="anime.html">
+              <h4 title="Читать далее…">10 японских аниме с эко-подтекстом…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/mononoke.png"> </div>
+              <p>Шедевры студии Ghibli…</p>
+            </a>
+            <audio src="audio/mononoke.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="teach">
+            <a href="teach.html">
+              <h4 title="Читать далее…">25 образовательных каналов про экологию…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/earth-dot.png"> </div>
+              <p>Плейлисты посвященные…</p>
+            </a>
+            <audio src="audio/Lofi.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="films">
+            <a href="films.html">
+              <h4 title="Читать далее…">70 фильмов с экологической тематикой…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/film.png"> </div>
+              <p>Никогда не поздно…</p>
+            </a>
+            <audio src="audio/gentle.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="ecokids">
+            <a href="ecokids.html">
+              <h4 title="Читать далее…">50 роликов для детей с эко посылом</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/zeml.png"> </div>
+              <p>Образовательные ролики…</p>
+            </a>
+            <audio src="audio/Childhood.mp3" id="audio"></audio>
+          </div>
+
+          <div class="news swiper-slide" id="soviet">
+            <a href="soviet.html">
+              <h4 title="Читать далее…">25 мультфильмов детей из поколения Х …</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/gena.png"> </div>
+              <p>Экология - дело общее…</p>
+            </a>
+            <audio src="audio/gena.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="podcasts">
+            <a href="podcasts.html">
+              <h4 title="Читать далее…">70 позновательных эко-подкастов…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/podcasts.png"> </div>
+              <p>Слушайте где угодно…</p>
+            </a>
+            <audio src="audio/podcast.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="songs">
+            <a href="songs.html">
+              <h4 title="Читать далее…">…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/.png"> </div>
+              <p>…</p>
+            </a>
+          </div>
+
+          <div class="swiper-slide news " id="tragedy">
+            <a href="tradegy.html">
+              <h4 title="Читать далее…">…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/.png"> </div>
+              <p>…</p>
+            </a>
+          </div>
+
+          <div class="swiper-slide news " id="ecorg">
+            <a href="ecorg.html">
+              <h4 title="Читать далее…">…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/.png"> </div>
+              <p>…</p>
+            </a>
+          </div>
+
+          <div class="swiper-slide news " id="movies">
+            <a href="warmovies.html">
+              <h4 title="Читать далее…">15 полнометражных мультфильмов…</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/warmovies.avif"></div>
+              <p>На войне нет победителей… </p>
+            </a>
+            <audio src="audio/.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="movies">
+            <a href="warshort.html">
+              <h4 title="Читать далее…">60 короткометражных фильмов о войне…</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/warshort.avif"></div>
+              <p>Война — это путь обмана… </p>
+            </a>
+            <audio src="audio/.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="movies">
+            <a href="waranime.html">
+              <h4 title="Читать далее…">45 японских аниме об ужасах войны …</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/waranime.png"></div>
+              <p>Война разрушает всё… </p>
+              <!-- кроме боли -->
+            </a>
+            <audio src="audio/.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="movies">
+            <a href="warfilms.html">
+              <h4 title="Читать далее…">60 фильмов о военных конфликтах…</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/warfilms.png"></div>
+              <p>Насилие рождает насилие… </p>
+            </a>
+            <audio src="audio/.mp3" id="audio"></audio>
+          </div>
+        </div>
+        <p></p>
+        <div class="swiper-pagination">
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <!--<h1 style="display:block;font-size:2rem;text-align:center;">Проект поддержали</h1>
+<div class="swiper">
+<div class="org-wrapper">
+<div class="news-wrapper swiper-wrapper">
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://ecosen.kz/">
+      <h4>
+        <pre>Ecosen
+               </pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/ecosen.png"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://www.undp.org/ru/kazakhstan">
+      <h4>
+        <pre>UNDP
+           </pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/undp.jpg"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://ecocashback.kz/">
+      <h4>
+        <pre>Eco
+cashback</pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/ecocashback.png"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://ekofond.kz/">
+      <h4>
+        <pre>ОФ ЭкоФонд
+               </pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/ecofond.jfif"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://www.linkedin.com/company/united-central-asian-professional-ucap/">
+      <h4>
+        <pre>UCAP
+team</pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/ucap.jpg"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://econetwork.green/">
+      <h4>
+        <pre>Eco
+Network</pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/econetwork.png"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://www.unicef.org/kazakhstan/">
+      <h4>UNICEF Kazakhstan</h4>
+      <div class="kartinka"><img loading="lazy" src="logo/unicef.jpg"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://www.instagram.com/youth4climatekz/">
+      <h4>Youth for Climate</h4>
+      <div class="kartinka"><img loading="lazy" src="logo/youtclimate.jpg"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://www.instagram.com/p/C_95jgTC_ih/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+      <h4>
+        <pre>Департамент
+Экологии</pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/department.jpg"></div>
+    </a>
+  </div>
+
+  <div class="swiper-slide partner " id="series">
+    <a href="https://taplink.cc/taza.likee">
+      <h4>
+        <pre>  Taza.likee
+</pre>
+      </h4>
+      <div class="kartinka"><img loading="lazy" src="logo/tazalike.jpg"></div>
+    </a>
+  </div>
+   
+       <div class="swiper-slide partner " id="series">
+         <a href="https://recyclebirge.kz/">
+           <h4>Recycle birge</h4>
+           <div class="kartinka">
+             <img loading="lazy" src="logo/recycle.jpg">
+           </div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.acbk.kz/">
+           <h4>
+             <pre>    АСБК              
+             </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/acbk.jfif"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.instagram.com/lcoy_kazakhstan/">
+           <h4>
+             <pre>LCOY
+             </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/lcoy.jpg"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.unsdsn.org/our-networks/kazakhstan/">
+           <h4>
+             <pre>SDSN
+             </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/sdsn.jpg"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.usaid.gov/ru/central-asia-regional">
+           <h4>
+             <pre>USAID
+           </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/usaid.png"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://kaz-waste.kz/">
+           <h4>
+             <pre>Kazwaste
+           </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/kazwaste.png"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://plastnet.kz/">
+           <h4>
+             <pre>Plastnet
+           </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/plastnet.png"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://impacthubalmaty.net/">
+           <h4>
+             <pre>Impacthub
+           </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/impacthub.jpg"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://kazakhstan.fes.de/">
+           <h4>
+             <pre>FES
+           </pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/fes.png"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.eurasia.org/who-we-are/eurasia-foundation-of-central-asia/">
+           <h4>
+             <pre>Eurasia
+Foundation</pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/EF.png"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.instagram.com/climate.centralasia/">
+           <h4>
+             <pre>CAICA
+</pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/caica.jpg"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://open-almaty.kz/">
+           <h4>
+             <pre>Open
+Almaty</pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/open_alma.jpg"></div>
+         </a>
+       </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://www.gov.kz/memleket/entities/almaty?lang=en">
+           <h4>
+             <pre>Akimat
+Almaty</pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/almaty.jpeg"></div>
+         </a>
+       </div>
+
+      <div class="swiper-slide partner " id="series">
+       <a href="">
+         <h4> 
+           <pre>  
+Almaty</pre>  
+         </h4>
+         <div class="kartinka"><img loading="lazy" src="logo/alma.jpg"></div>
+       </a>
+     </div>
+
+       <div class="swiper-slide partner " id="series">
+         <a href="https://kameda.kz/">
+           <h4>
+             <pre>Kameda
+PF</pre>
+           </h4>
+           <div class="kartinka"><img loading="lazy" src="logo/kameda.jpg"></div>
+         </a>
+       </div>
+</div>
+<div class="swiper-pagination">
+</div>
+</div>
+</div>-->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/09e0948662.js" crossorigin="anonymous"></script>
+  <!--=============== MAIN JS ===============-->
+  <script src="main.js"></script>
+  <script>
+    document.querySelector("#item-1").checked=true
+
+    const randomizerBtn=document.querySelector(".randomizerBtn")
+    const ul = document.querySelector(".sdgs-container")
+    const sdgs = ul.querySelectorAll("li")
+
+    const usedIndexes = [];
+
+    let randomsdg 
+
+    randomizerBtn.addEventListener('click', ()=>{
+      let current;
+      sdgs.forEach(function(sdg){
+        if(sdg.querySelector("input").checked){
+          current = Number(String(sdg.querySelector("input").id).replace("item-",""));
+          sdg.querySelector("input").checked=false;
+        }
+      })
+      while (true){
+        randomsdg = Math.ceil(Math.random() * 17)+1
+        if (usedIndexes.length==17){
+          break
+          alert("Nega")
+        }
+        if(randomsdg==current || randomsdg==1 || usedIndexes.includes(randomsdg-1)){
+          continue
+        }else{
+          break
+        }
+      }
+      document.querySelector("#item-"+String(randomsdg)).checked=true
+
+      generateQuestion()
+    })
+
+    //
+    const quizData = [
+    // SDG 1: No Poverty
+    [
+        { 
+            question: "How can you tell that someone is living in poverty?", 
+            options: [
+                "The person doesn’t have a smartphone", 
+                "The person is not able to fulfil their basic needs, including food, healthcare, education among others", 
+                "The person is not well dressed"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Are there fewer people living in poverty now than there were 25 years ago?", 
+            options: [
+                "No, 1 billion more people are now living in poverty", 
+                "Yes, 1 billion people have been lifted out of poverty"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "How many people are living in extreme poverty worldwide?", 
+            options: [
+                "Around 800 people", 
+                "Around 8,000 people", 
+                "Over 800 million people"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Most of the people living in poverty live in:", 
+            options: [
+                "Europe", 
+                "North and South America", 
+                "Africa and Asia"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "In 1980, almost four in ten people (38%) lived in extreme poverty. How many people live in extreme poverty now?", 
+            options: [
+                "1 in 10", 
+                "3 in 10", 
+                "5 in 10"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 2: Zero Hunger
+    [
+        { 
+            question: "Is enough food produced in the world to feed everyone?", 
+            options: [
+                "No, because I get hungry all the time", 
+                "Enough healthy food is produced, but not enough sweets and fizzy drinks", 
+                "There is enough food but not everyone can afford to buy food"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "True or false: the number of starving people in the world is decreasing.", 
+            options: [
+                "True", 
+                "False"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "How many people in the world are not eating enough to be in good health?", 
+            options: [
+                "Almost 90 people", 
+                "Almost 9,000 people", 
+                "Almost 900 million people"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Which of these statements is true?", 
+            options: [
+                "You need at least one sweetened fizzy drink per day to stay healthy", 
+                "There is enough food to feed the world", 
+                "You can stay healthy if you don’t eat vegetables and fruits"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "What is malnutrition?", 
+            options: [
+                "When you don’t have a three-course meal", 
+                "When you don’t eat meat every day", 
+                "When you don’t eat enough healthy food for a certain period of time"
+            ], 
+            answer: 2, 
+            used: false 
+        }
+    ],
+
+    // SDG 3: Good Health
+    [
+        { 
+            question: "What is the average life expectancy in the world?", 
+            options: [
+                "50 years", 
+                "60 years", 
+                "70 years"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Choose two things that could help stop children under 5 from dying.", 
+            options: [
+                "Nutritious food", 
+                "Mobile phones", 
+                "Clean drinking water", 
+                "Fizzy drinks"
+            ], 
+            answer: [0, 2], 
+            used: false 
+        },
+        { 
+            question: "What is best for a newborn baby?", 
+            options: [
+                "Being bottle fed", 
+                "Drinking water", 
+                "Breastfeeding"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "How many minutes of exercise should children between 5 and 17 do everyday?", 
+            options: [
+                "60 minutes", 
+                "30 minutes", 
+                "Children don’t need to exercise everyday"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Which of these insects has helped spread the disease malaria?", 
+            options: [
+                "Mosquitoes", 
+                "Dragonflies", 
+                "Fireflies"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 4: Quality Education
+    [
+        { 
+            question: "Most of the children who do not go to school live on which continent?", 
+            options: [
+                "Europe", 
+                "Asia", 
+                "America", 
+                "Africa"
+            ], 
+            answer: 3, 
+            used: false 
+        },
+        { 
+            question: "True or false: fewer girls than boys attend school worldwide.", 
+            options: [
+                "False", 
+                "True"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Education...", 
+            options: [
+                "Will make it hard for you to get a job", 
+                "Will help you get a job and improve your life", 
+                "Is only useful for very smart kids"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Quality education is good for...", 
+            options: [
+                "Improving health", 
+                "Reducing poverty", 
+                "Both"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "What percentage of adults today are literate, meaning they can read and write?", 
+            options: [
+                "80%", 
+                "60%", 
+                "30%"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 5: Gender Equality
+    [
+        { 
+            question: "Only one country in the world has more women than men in parliament in 2017. Which country is it?", 
+            options: [
+                "The United Kingdom", 
+                "Norway", 
+                "France", 
+                "Rwanda", 
+                "Peru"
+            ], 
+            answer: 3, 
+            used: false 
+        },
+        { 
+            question: "Which country was the first in the world to give women full political rights (the right to vote and be elected)?", 
+            options: [
+                "France", 
+                "The United States of America", 
+                "Finland"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "How many countries in the world had a woman as president or head of state in 2017?", 
+            options: [
+                "5", 
+                "20", 
+                "100"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Who should do the cooking and cleaning in the house?", 
+            options: [
+                "The males in the house", 
+                "The females in the house", 
+                "Everyone should help out"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "What percentage of researchers in science and technology are women?", 
+            options: [
+                "50%", 
+                "90%", 
+                "70%"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 6: Clean Water and Sanitation
+    [
+        { 
+            question: "How can you use less water?", 
+            options: [
+                "There’s no shortage of water where I live, I can use as much as I like", 
+                "By taking a shower rather than a bath", 
+                "By drinking sweetened fizzy drinks instead of water"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Potable water is:", 
+            options: [
+                "Water that is safe to drink", 
+                "Water that we can find in flower pots", 
+                "Water that looks clean"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Where does most of the wastewater resulting from human activities go?", 
+            options: [
+                "It is treated and recycled", 
+                "It is stored in safe places", 
+                "It is discharged into rivers or seas without any treatment against pollution"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Which statement is correct?", 
+            options: [
+                "More people have a mobile phone than a toilet", 
+                "Most people have toilets but can’t afford a mobile phone", 
+                "Everyone has both a mobile phone and a toilet"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What percentage of water in the world is potable?", 
+            options: [
+                "Only 3%", 
+                "Half of all water, 50%", 
+                "Almost all of it, 97%"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 7: Affordable and Clean Energy
+    [
+        { 
+            question: "Spot the wrong answer. Clean energy can be produced with...", 
+            options: [
+                "Coal", 
+                "Sun", 
+                "Wind", 
+                "Waves"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What does energy efficiency mean?", 
+            options: [
+                "When a lamp gives a bright light", 
+                "When you can use energy without having to worry about your consumption", 
+                "A device or building that uses relatively little energy to provide it with the power it needs"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Global warming happens mainly because of an increase of a certain gas in the atmosphere. Which gas is it?", 
+            options: [
+                "Ozone", 
+                "Carbon dioxide", 
+                "Mustard Gas"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Some energy sources are renewable, why?", 
+            options: [
+                "Because they do not pollute", 
+                "Because they are brand new", 
+                "Because they can be replenished by nature in a short time"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Which of these is a renewable energy source?", 
+            options: [
+                "Oil", 
+                "Gas", 
+                "Sunlight"
+            ], 
+            answer: 2, 
+            used: false 
+        }
+    ],
+
+    // SDG 8: Decent Work and Economic Growth
+    [
+        { 
+            question: "Should women be paid the same as men if they have the same job?", 
+            options: [
+                "Yes, men and women have the same rights", 
+                "No, men should be paid more because they are stronger"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "If you have a job, does that mean you are safe from poverty?", 
+            options: [
+                "Yes, because you work to earn money", 
+                "No, you can have a job and live in poverty"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "What does 'economic growth' mean?", 
+            options: [
+                "You save more money every month", 
+                "Prices are increasing", 
+                "An increase in the value of goods and services produced by a country"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "How many people are jobless worldwide?", 
+            options: [
+                "2 million", 
+                "20 million", 
+                "200 million"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "True or false: every adult possesses a bank account.", 
+            options: [
+                "True", 
+                "False"
+            ], 
+            answer: 1, 
+            used: false 
+        }
+    ],
+
+    // SDG 9: Industry, Innovation, and Infrastructure
+    [
+        { 
+            question: "What is a sustainable factory?", 
+            options: [
+                "A factory that has been built long ago and is still functioning", 
+                "A factory that produces toxic waste", 
+                "A factory that causes no damage to the environment"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "True or false: everyone has access to the internet.", 
+            options: [
+                "True", 
+                "False"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "True or false: everyone has access to electricity.", 
+            options: [
+                "True", 
+                "False"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Which one of these innovations is the best at fighting climate change?", 
+            options: [
+                "An electric car", 
+                "A diesel car", 
+                "A petrol car"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What infrastructure is important for quality education?", 
+            options: [
+                "Playgrounds and snacks", 
+                "Clean schools, teachers, and books", 
+                "Soft beverage dispenser"
+            ], 
+            answer: 1, 
+            used: false 
+        }
+    ],
+
+    // SDG 10: Reduced Inequalities
+    [
+        { 
+            question: "What is the best way to fight poverty?", 
+            options: [
+                "Do nothing and ignore the problem", 
+                "Share the wealth produced in the world", 
+                "Prevent foreigners from entering your country"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "True or false: in the last 25 years, the number of people in extreme poverty has NOT gone down.", 
+            options: [
+                "True", 
+                "False"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "At school...", 
+            options: [
+                "Girls should learn to knit and cook", 
+                "Boys should learn science and technology", 
+                "Girls and boys should have equal learning opportunities"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "We can fight inequalities by:", 
+            options: [
+                "Making sure that all children have access to a good education", 
+                "Making sure that everyone is wearing the same clothes", 
+                "Making sure that everyone watches the same TV"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "To reduce health inequalities, all children should have access to:", 
+            options: [
+                "Clean drinking water", 
+                "Medical care", 
+                "Vaccines", 
+                "All of the above"
+            ], 
+            answer: 3, 
+            used: false 
+        }
+    ],
+
+    // SDG 11: Sustainable Cities and Communities
+    [
+        { 
+            question: "How many people in developing countries live in slums?", 
+            options: [
+                "30%", 
+                "55%", 
+                "80%"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Solutions to save energy and protect the planet already exist. Which of these are not real?", 
+            options: [
+                "Bicycles", 
+                "Electric buses", 
+                "Flying cars"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Where is the fastest urbanisation in the world happening?", 
+            options: [
+                "Europe", 
+                "The United States of America", 
+                "In developing countries"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "In 2030, what percentage of the world’s population will live in urban areas?", 
+            options: [
+                "60%", 
+                "100%", 
+                "20%"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What is renewable energy?", 
+            options: [
+                "Energy that comes from natural sources and never runs out", 
+                "Energy from outer space", 
+                "A form of energy used by the Pharaohs of ancient Egypt"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 12: Responsible Consumption and Production
+    [
+        { 
+            question: "Statement: there are plenty of fish in the sea.", 
+            options: [
+                "True, I can eat as many as I want!", 
+                "False. Overfishing, pollution, and climate change are reducing the populations of fish in the oceans"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "How much food is wasted every day worldwide?", 
+            options: [
+                "None, as all the food is eaten or frozen", 
+                "One third of all food produced", 
+                "Very little, as people have dramatically reduced the waste"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Plastic bags are a big problem for our environment. Which country was the first to ban plastic bags?", 
+            options: [
+                "Sweden", 
+                "Russia", 
+                "Rwanda"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "How do bees help our environment?", 
+            options: [
+                "They help plants grow and make food", 
+                "They do not help, they just make honey", 
+                "They eat other insects"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Oil is the most polluting industry in the world. Which industry comes second?", 
+            options: [
+                "Coal extraction", 
+                "Textile industry", 
+                "Cellphone industry"
+            ], 
+            answer: 1, 
+            used: false 
+        }
+    ],
+
+    // SDG 13: Climate Action
+    [
+        { 
+            question: "What is renewable energy?", 
+            options: [
+                "A brand of an energy drink", 
+                "Energy generated from natural resources—such as sunlight and wind", 
+                "A source of energy with a renewable subscription fee"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "Which of the following statements is correct?", 
+            options: [
+                "Global warming doesn’t exist because last winter was really cold", 
+                "Global warming doesn’t exist because there are still global ice caps", 
+                "Global warming will lead to more flooding and heavy storms"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Countries should make sure they use more:", 
+            options: [
+                "Coal and oil for energy", 
+                "Nuclear energy", 
+                "Energy from the sun, wind, and waves"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "In 2015, where did world leaders agree to a plan for our climate?", 
+            options: [
+                "Paris (Paris Agreement)", 
+                "London (Big Ben Agreement)", 
+                "New York (The Manhattan Agreement)"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Who is in charge of looking after the planet?", 
+            options: [
+                "Scientists", 
+                "Famous people", 
+                "Government officials", 
+                "Everyone"
+            ], 
+            answer: 3, 
+            used: false 
+        }
+    ],
+
+    // SDG 14: Life Below Water
+    [
+        { 
+            question: "Which of the following contribute to marine pollution...", 
+            options: [
+                "Litter on the beach", 
+                "Jellyfish and crabs", 
+                "Seaweed"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What is overfishing?", 
+            options: [
+                "Eating too much fish and getting sick", 
+                "Taking more fish out of the sea than can be replaced naturally", 
+                "Overfeeding fish so they get bigger"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "True or false: If we do not change our habits by 2050, there will be more plastic in the ocean than there are fish.", 
+            options: [
+                "True", 
+                "False"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What percentage of all the species living in the ocean have been identified?", 
+            options: [
+                "Around 5%", 
+                "Around 50%", 
+                "More than 80%"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Plastic bags are dangerous for turtles because sometimes they think they are...", 
+            options: [
+                "Food", 
+                "A toy", 
+                "A shell"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 15: Life on Land
+    [
+        { 
+            question: "We must protect our forests to fight climate change because:", 
+            options: [
+                "Forests are good places to play", 
+                "Trees produce oxygen", 
+                "We need wood for building houses"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "The extinction of animal species is due to...", 
+            options: [
+                "Human activities", 
+                "Animals eating each other", 
+                "The frequency emissions of mobile phones"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Globally, forests are...", 
+            options: [
+                "Growing, there are trees everywhere", 
+                "Being cut down at the same rate they are being replanted", 
+                "Vanishing, around half of all forests have already disappeared"
+            ], 
+            answer: 2, 
+            used: false 
+        },
+        { 
+            question: "Trees are essential because...", 
+            options: [
+                "They are a habitat for wildlife", 
+                "You can climb them", 
+                "Plastic is produced from trees"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Biodiversity is...", 
+            options: [
+                "The diversity of animal and plant species living on our planet", 
+                "The variety of healthy products you can find in a supermarket", 
+                "The number of planets where humans could live"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 16: Peace, Justice, and Strong Institutions
+    [
+        { 
+            question: "Which of the following is a democracy?", 
+            options: [
+                "A country ruled by a dictator", 
+                "A country ruled by the people", 
+                "A country ruled only by men"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "What is a child soldier?", 
+            options: [
+                "A child who plays war games with other children", 
+                "A child who is enrolled in an armed group", 
+                "Both"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "What is a refugee camp?", 
+            options: [
+                "A summer camp in the mountains", 
+                "A camp for the protection of people when they flee from their homes", 
+                "A military camp"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "What is child displacement?", 
+            options: [
+                "When a child goes on holiday", 
+                "When a child is displaced due to armed conflict", 
+                "When a child spends the night at a friend’s home"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "A 'blue helmet' is...", 
+            options: [
+                "A soldier who works with the United Nations to maintain peace", 
+                "A firefighter in the navy", 
+                "A child soldier"
+            ], 
+            answer: 0, 
+            used: false 
+        }
+    ],
+
+    // SDG 17: Partnerships for the Goals
+    [
+        { 
+            question: "A partnership is...", 
+            options: [
+                "When you are playing with a friend and you pretend to be parents", 
+                "When people and organisations support each other to achieve a common goal", 
+                "When two pupils eat at the same table every day"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "How does fair trade contribute to the SDGs?", 
+            options: [
+                "It offers better trading conditions to producers and workers", 
+                "It increases profits for industries", 
+                "It encourages producers to hire children"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "What has made communication among partners easier?", 
+            options: [
+                "Messenger pigeons", 
+                "The internet", 
+                "Messages in bottles"
+            ], 
+            answer: 1, 
+            used: false 
+        },
+        { 
+            question: "What is needed to achieve the 17 Sustainable Development Goals?", 
+            options: [
+                "The involvement of all countries", 
+                "The developed countries leading the change", 
+                "The developing countries leading the change"
+            ], 
+            answer: 0, 
+            used: false 
+        },
+        { 
+            question: "Who should be involved in partnerships to achieve the 17 SDGs?", 
+            options: [
+                "Citizens", 
+                "Governments", 
+                "Companies", 
+                "All of the above"
+            ], 
+            answer: 3, 
+            used: false 
+        }
+    ]
+];
+    
+ 
+    function generateQuestion() {
+      if (usedIndexes.length === quizData.length) {
+        console.log(usedIndexes,quizData)
+        document.getElementById("question-area").innerHTML = "<p class='question'>Все вопросы исчерпаны!</p>";
+        return;
+      }
+
+      let listIndex = randomsdg-1;
+
+      const list = quizData[listIndex-1];
+
+      const availableQuestions = list.filter(q => !q.used);
+      if (availableQuestions.length === 0) {
+        if(!usedIndexes.includes(listIndex)){
+          usedIndexes.push(listIndex);
+        }
+        return;
+      }
+
+      const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+      const questionData = availableQuestions[questionIndex];
+      questionData.used = true;
+
+      renderQuestion(questionData, listIndex);
+    }
+
+    function renderQuestion(data, listIndex) {
+      const questionArea = document.getElementById("question-area");
+      questionArea.innerHTML = `        <img src="SGD.png" alt="" style="width:80px;height:80px;justify-self:center;">
+<p class='number'>SDG №: ${listIndex}</p>`;
+      questionArea.innerHTML += `<p class='question'>${data.question}</p>`;
+
+      const optionsHtml = data.options
+        .map((option, index) => `<button onclick='checkAnswer(this, ${index}, ${data.answer})'>${option}</button>`)
+        .join("");
+
+      questionArea.innerHTML += `<div class='options'>${optionsHtml}</div>`;
+    }
+
+    function checkAnswer(button, selected, correct) {
+      if (selected === correct) {
+        button.classList.add('correct');
+      } else {
+        button.classList.add('incorrect');
+      }
+    }    
+  </script>
+</body>
+
+<footer>
+  <div class="info-wrapper">
+    <div class="info" style="text-align: center">
+      <a href="https://kazstat.github.io/sdg-site-kazstat/ru/" target="_blank"><img loading="lazy" src="logo/sdg.png"
+          style="width: 7.5rem" /></a>
+      <div class="social">
+        <a href="https://vk.com/zhasik0007" target="_blank">
+          <span class="vk">
+            <i aria-hidden="true" class="vk fab fa-vk"></i>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/jastyq_korpeshka/" target="_blank">
+          <span class="insta">
+            <i aria-hidden="true" class="fab fa-instagram"></i>
+          </span>
+        </a>
+        <a href="https://wa.me/77051327714" target="_blank">
+          <span class="whats">
+            <i aria-hidden="true" class="fab fa-whatsapp"></i>
+          </span>
+        </a>
+        <a href="https://t.me/jastyq_korpeshka" target="_blank">
+          <span class="telega">
+            <i aria-hidden="true" class="fab fa-telegram"></i>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/jastyq-korpeshka/" target="_blank">
+          <span class="linkedin">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </span>
+        </a>
+      </div>
+      <div>
+        <p>© 2024, jastyq_korpeshka</p>
+      </div>
+    </div>
+    <div class="info">
+      <h3>
+        <a href="zhasulan.html" style="text-decoration: none;">Обо мне</a>
+      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.unicef.org/kazakhstan/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/%D0%BA%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B5%D0%B6%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D0%B5%D1%82-%D0%B8%D0%BD%D0%BD%D0%BE%D0%B2%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%8D%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC">Проекты
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://orda.kz/sdavali-musor-i-zabirali-kotjat-v-almaty-proshla-jekoakcija-recycle-birge-387534/">СМИ</a>
+        </li>
+        <li><a href="https://drive.google.com/file/d/1oWkrbC4nMZsQ50kiSIfIsYB7_H9zDqHd/view?usp=sharing ">Достижения</a>
+        </li>
+        <li>Галерея</li>
+      </ul>
+    </div>
+    <div class="info">
+      <h3>Контакты</h3>
+      <ul>
+        <li>
+          <a href="https://2gis.kz/astana/geo/9570771978420226" target="_blank">
+            <i aria-hidden="" class="fa fa-map-marker-alt"></i>&nbsp; Астана, Казахстан
+          </a>
+        </li>
+        <li>
+          <a href="Zhasulan Toleubekov.vcf">
+            <i aria-hidden="true" class="fa fa-phone"></i>&nbsp;+7 705 132 77 14
+          </a>
+        </li>
+        <li>
+          <a href="mailto:zhaszhasulan35@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>&nbsp; zhaszhasulan35.gmail
+          </a>
+        </li>
+        <li>
+          <a href="https://qazvolunteer.kz/kk/volunteers/62022" target="_blank">
+            <i class="fas fa-hand-holding-heart"></i> &nbsp;qazvolunteer.kz
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="info" style="text-align: center">
+      <a href="https://kazakhstan.un.org/ru" target="blank"> <img src="logo/unmission.png" style="width: 7.5rem" /></a>
+      <div class="social">
+        <a href="https://open.spotify.com/user/317be2jr6gbpuscej2vk5sldde2m?si=bd07db8ed04646ee" target="_blank">
+          <span class=" spotify">
+            <i aria-hidden="true" class="fab fa-spotify"></i>
+          </span>
+        </a>
+        <a href="https://www.strava.com/athletes/jastyq_korpeshka" target="_blank">
+          <span class="icon strava">
+            <i aria-hidden="true" class="fab fa-strava"></i>
+          </span>
+        </a>
+        <a href="https://github.com/Zhaik007" target="_blank">
+          <span class="icon github">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </span>
+        </a>
+        <a href="https://www.chess.com/member/tj_009" target="_blank">
+          <span class="icon chess">
+            <i class="fa-solid fa-chess-pawn"></i>
+          </span>
+        </a>
+        <a href="https://www.youtube.com/@zhasulantoleubekov931" target="_blank">
+          <span class="icon utube">
+            <i aria-hidden="true" class="fab fa-youtube"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>

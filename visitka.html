@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>jastyq_korpeshka</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="logo/logo.png" type="image/icon type" />
+  <meta name="keywords" content="Ecology,Plastic,Pollution,Contamination,Cartoons,Animated series,Climate change," />
+  <meta name="description" content="Business card of Zhassulan Toleubekov" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <!-- Swiper js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+  <!-- Link to Font Awesome  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- Custom Style Sheet -->
+
+  <style>
+    .card {
+      font-family: "Courier New", Courier, monospace;
+      margin: 1rem auto;
+    }
+
+    .card {
+      width: 36rem;
+      height: 20rem;
+      background-color: #fff;
+      transform-style: preserve-3d;
+      position: relative;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      transition: transform 1s;
+    }
+
+    .card-wrapper {
+      justify-content: center;
+    }
+
+    .rotated {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: inherit;
+    }
+
+    .card-front {
+      display: flex;
+      background: linear-gradient(100deg,
+          rgb(255, 255, 255) 40%,
+          rgb(38, 38, 38) 0);
+      overflow: hidden;
+    }
+
+    .top_left,
+    .top_right,
+    .bottom_left,
+    .bottom_right {
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+    }
+
+    .top_left {
+      border-top-left-radius: 15px;
+      left: 0;
+    }
+
+    .top_right {
+      border-top-right-radius: 15px;
+      right: 0;
+    }
+
+    .top {
+      top: 0;
+    }
+
+    .bottom_right,
+    .bottom_left {
+      bottom: 0;
+    }
+
+    .bottom_left {
+      left: 0;
+      border-bottom-left-radius: 15px;
+    }
+
+    .bottom_right {
+      right: 0;
+      border-bottom-right-radius: 15px;
+    }
+
+    .left {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card-front .right {
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .circle {
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background-color: #11ac21;
+      text-align: center;
+    }
+
+    .card i {
+      font-size: 2rem;
+    }
+
+    .card .circle i {
+      font-size: 1rem;
+    }
+
+    .card a {
+      color: #f2f6f7b8;
+      text-decoration: none;
+      text-align: justify;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 10px 0 10px 20px;
+    }
+
+    .card h2 {
+      color: rgb(21, 219, 21);
+    }
+
+    .card a:hover {
+      color: #fff;
+    }
+
+    .card .social {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .person h4 {
+      text-transform: uppercase;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-back .left,
+    .card-back .right {
+      width: 50%;
+    }
+
+    .card-back .right img,
+    .left img {
+      width: 70%;
+    }
+
+    .left img {
+      border-radius: 50%;
+    }
+
+    .card .card-front .right {
+      padding: 1rem;
+    }
+
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      .left {
+        width: 45%;
+      }
+
+      .card .card-front .right {
+        padding-left: 0;
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+      }
+
+      .card {
+        width: 25rem;
+        height: 16rem;
+      }
+
+      .card a {
+        font-size: 1rem;
+        padding: 5px 0 5px 10px;
+      }
+
+      .card-front {
+        background: linear-gradient(97deg,
+            rgb(255, 255, 255) 40%,
+            rgb(38, 38, 38) 0);
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .left {
+        width: 47%;
+      }
+
+      .card .card-front .right {
+        padding-left: 0;
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+      }
+
+      .card {
+        width: 22rem;
+        height: 14rem;
+      }
+
+      .card a {
+        font-size: 1rem;
+        padding: 5px 0 5px 10px;
+        gap: 0.4rem;
+      }
+
+      .top_left,
+      .top_right,
+      .bottom_left,
+      .bottom_right {
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+      }
+
+      .card-front {
+        background: linear-gradient(97deg,
+            rgb(255, 255, 255) 40%,
+            rgb(38, 38, 38) 0);
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav ">
+      <div class="nav__data">
+        <a href="https://www.instagram.com/jasyl_kenistik/" class="nav__logo">
+          <img src="logo/Лого.png">
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Main</a></li>
+
+          <li><a href="zhasulan.html" class="nav__link">About me</a></li>
+
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <a href="#collect" class="nav__link">
+              Collections<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </a>
+
+            <ul class="dropdown__menu">
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <i class="ri-archive-stack-fill"></i> Media <i class="ri-add-line dropdown__add"></i>
+                </div>
+
+                <ul class="dropdown__submenu">
+                  <li>
+                    <a href="babies.html" class="dropdown__sublink">
+                      <i class="ri-parent-fill"></i> For kids
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="ecokids.html" class="dropdown__sublink">
+                      <i class="ri-git-repository-fill"></i> Entartaining
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="index.html" class="dropdown__sublink">
+                      <i class="ri-emotion-laugh-fill"></i> TV Series
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="teach.html" class="dropdown__sublink">
+                      <i class="ri-graduation-cap-fill"></i> Educative
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="films.html" class="dropdown__sublink">
+                      <i class="ri-user-2-fill"></i> Films
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="short.html" class="dropdown__sublink">
+                      <i class="ri-film-fill"></i> Shortfilms
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="anime.html" class="dropdown__sublink">
+                      <i class="ri-movie-fill"></i> Anime
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="kazakh.html" class="dropdown__sublink">
+                      <i class="ri-flag-fill"></i> Kazakh
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="podcasts.html" class="dropdown__sublink">
+                      <i class="ri-voiceprint-fill"></i> Podcasts
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="movies.html" class="dropdown__sublink">
+                      <i class="ri-clapperboard-fill"></i> Movies
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="promo.html" class="dropdown__sublink">
+                      <i class="ri-advertisement-fill"></i>Promo
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="soviet.html" class="dropdown__sublink">
+                      <i class="ri-folder-5-fill"></i>Old cartoons
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-team-fill"></i>Eco-communities
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-group-fill"></i>
+                  </i>Eco-activists
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Materials</a>
+          </li>
+          <li><a href="#" class="nav__link" target="">Contacts</a></li>
+          <li class="dropdown__item language">
+            <button id="cdrop" class="nav__link" style="border:none;" type="button">
+              RU <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </button>
+            <ul class="dropdown__menu lang" id="langdrop">
+              <li>
+                <a href="#" class="dropdown__link">
+                  <img class="rounded inline-block align-middle" src="img/RU.png">
+                  <p>RU</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link">
+                  <img class="rounded inline-block align-middle" src="img/US.png">
+                  <p>ENG</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link">
+                  <img class="rounded inline-block align-middle" src="img/KZ.png">
+                  <p>KZ</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main style="backdrop-filter: none;" class="article">
+    <h1 style="display:block;font-size: 2rem; text-align:center;" title="With care for nature. No more paper cards">
+      Business card</h1>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-front">
+          <img class="top_left top" src="images/top_left.png">
+
+          <div class="left">
+            <img src="images/me.png" id="my-image">
+            <div>
+              <h2>Zhassulan Toleubekov</h2>
+              <p>Eco activist</p>
+            </div>
+          </div>
+
+          <div class="right">
+            <h2 style="padding-left:1rem;">Contacts</h2>
+            <a target="_blank" href="Zhasulan Toleubekov.vcf">
+              <div class="circle">
+                <i aria-hidden="true" class="fa fa-phone"></i>
+              </div>
+              +7(705)132-77-14
+            </a>
+
+            <a href="mailto:zhaszhasulan35@gmail.com" target="_blank">
+              <div class="circle">
+                <i aria-hidden="true" class="fas fa-envelope"></i>
+              </div>
+              zhaszhasulan35
+            </a>
+
+            <a href="https://2gis.kz/astana/geo/9570771978420226" target="_blank">
+              <div class="circle">
+                <i aria-hidden="" class="fa fa-map-marker-alt"></i>
+              </div> Astana, Kazakhstan
+            </a>
+
+            <div class="social">
+              <div class="right-content">
+                <a href="https://wa.me/77051327714" target="_blank">
+                  <span class="whats">
+                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                  </span>
+                </a>
+              </div>
+
+              <div class="right-content">
+                <a href="https://www.instagram.com/jastyq_korpeshka/" target="_blank">
+                  <span class="insta">
+                    <i aria-hidden="true" class="fab fa-instagram"></i>
+                  </span>
+                </a>
+              </div>
+
+              <div class="right-content">
+                <a href="https://t.me/jastyq_korpeshka" target="_blank">
+                  <span class="telega">
+                    <i aria-hidden="true" class="fab fa-telegram"></i>
+                  </span>
+                </a>
+              </div>
+
+              <div class="right-content">
+                <a href="https://www.linkedin.com/in/jastyq-korpeshka/" target="_blank">
+                  <span class="linkedin">
+                    <i aria-hidden="true" class="fab fa-linkedin"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <img class="bottom_right" src="images/bottom_right.png">
+        </div>
+
+        <div class="card-back">
+          <img class="bottom_left" src="images/bottom_left.png">
+
+          <div class="left">
+            <img src="images/sdg.png">
+          </div>
+          <div class="right">
+            <img src="images/.png">
+          </div>
+
+          <img class="top_right top" src="images/top_right.png">
+
+        </div>
+      </div>
+    </div>
+
+    <h1 style="display:block;font-size:2rem;text-align:center;">Collections</h1>
+    <div class="swiper">
+      <div class="slider-wrapper">
+        <div class="news-wrapper swiper-wrapper">
+
+          <div class="swiper-slide news " id="series">
+            <a href="index.html">
+              <h4 title="Читать далее…">20 animated series …</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/ben10.png"></div>
+              <p>Our childhood heroes…</p>
+            </a>
+            <audio src="audio/ben10.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="movies">
+            <a href="movies.html">
+              <h4 title="Читать далее…">30 animated movies…</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/eva.jpg"></div>
+              <p>We all know WALL-E…</p>
+            </a>
+            <audio src="audio/wall.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="babies">
+            <a href="babies.html">
+              <h4 title="Читать далее…">70 movies for kids…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/children.jpg"> </div>
+              <p>Everything begins from…</p>
+            </a>
+            <audio src="audio/UNICEF.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="short">
+            <a href="short.html">
+              <h4 title="Читать далее…">60 short films …</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/ocean.jpg"> </div>
+              <p>In less than 30 minutes…</p>
+            </a>
+            <audio src="audio/purity.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="promo">
+            <a href="promo.html">
+              <h4 title="Читать далее…">30 promo videos…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/lego.jpg"> </div>
+              <p>Pepsico, LEGO and etc…</p>
+            </a>
+            <audio src="audio/commercial.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="kazakh">
+            <a href="kazakh.html">
+              <h4 title="Әрі қарай оқу…">30 videos about ecology…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/kazakh.png"> </div>
+              <p>Kazakhstani videos about…</p>
+            </a>
+            <audio src="audio/aldar.mp3" id="audio"></audio>
+
+          </div>
+
+          <div class="swiper-slide news " id="anime">
+            <a href="anime.html">
+              <h4 title="Читать далее…">10 eco-anime…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/mononoke.png"> </div>
+              <p>Ghibli studio masterpieces…</p>
+            </a>
+            <audio src="audio/mononoke.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="teach">
+            <a href="teach.html">
+              <h4 title="Читать далее…">25 learning channels…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/earth-dot.png"> </div>
+              <p>Playlists for…</p>
+            </a>
+            <audio src="audio/Lofi.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="films">
+            <a href="films.html">
+              <h4 title="Читать далее…">70 films about ecology</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/film.png"> </div>
+              <p>It's never late to…</p>
+            </a>
+            <audio src="audio/gentle.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="ecokids">
+            <a href="ecokids.html">
+              <h4 title="Читать далее…">50 video for kids</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/zeml.png"> </div>
+              <p>Educative videos…</p>
+            </a>
+            <audio src="audio/Childhood.mp3" id="audio"></audio>
+          </div>
+
+          <div class="news swiper-slide" id="soviet">
+            <a href="soviet.html">
+              <h4 title="Читать далее…">25 old cartoons…</h4>
+              <div class="kartinka"><img loading="lazy" src="posters/gena.png"> </div>
+              <p>Caring about planet…</p>
+            </a>
+            <audio src="audio/gena.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="podcasts">
+            <a href="podcasts.html">
+              <h4 title="Читать далее…">70 podcasts about ecology…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/podcasts.png"> </div>
+              <p>Listen to them everywhere…</p>
+            </a>
+            <audio src="audio/podcast.mp3" id="audio"></audio>
+          </div>
+
+          <div class="swiper-slide news " id="songs">
+            <a href="songs.html">
+              <h4 title="Читать далее…">…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/.png"> </div>
+              <p>…</p>
+            </a>
+          </div>
+
+          <div class="swiper-slide news " id="tragedy">
+            <a href="tradegy.html">
+              <h4 title="Читать далее…">…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/.png"> </div>
+              <p>…</p>
+            </a>
+          </div>
+
+          <div class="swiper-slide news " id="ecorg">
+            <a href="ecorg.html">
+              <h4 title="Читать далее…">…</h4>
+              <div class="kartinka"> <img loading="lazy" src="posters/.png"> </div>
+              <p>…</p>
+            </a>
+          </div>
+        </div>
+        <p></p>
+        <div class="swiper-pagination">
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!--<h1 style="display:block;font-size:2rem;text-align:center;">Проект поддержали</h1>
+    <div class="swiper">
+      <div class="org-wrapper">
+        <div class="news-wrapper swiper-wrapper">
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ecosen.kz/">
+              <h4>
+                <pre>Ecosen
+                       </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ecosen.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.undp.org/ru/kazakhstan">
+              <h4>
+                <pre>UNDP
+                   </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/undp.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ecocashback.kz/">
+              <h4>
+                <pre>Eco
+     cashback</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ecocashback.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ekofond.kz/">
+              <h4>
+                <pre>ОФ ЭкоФонд
+                       </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ecofond.jfif"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.linkedin.com/company/united-central-asian-professional-ucap/">
+              <h4>
+                <pre>UCAP
+     team</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/ucap.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://econetwork.green/">
+              <h4>
+                <pre>Eco
+     Network</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/econetwork.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.unicef.org/kazakhstan/">
+              <h4>UNICEF Kazakhstan</h4>
+              <div class="kartinka"><img loading="lazy" src="logo/unicef.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.instagram.com/youth4climatekz/">
+              <h4>Youth for Climate</h4>
+              <div class="kartinka"><img loading="lazy" src="logo/youtclimate.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.instagram.com/p/C_95jgTC_ih/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+              <h4>
+                <pre>Департамент
+     Экологии</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/department.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://taplink.cc/taza.likee">
+              <h4>
+                <pre>  Taza.likee
+        </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="logo/tazalike.jpg"></div>
+            </a>
+          </div>
+           
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://recyclebirge.kz/">
+                   <h4>Recycle birge</h4>
+                   <div class="kartinka">
+                     <img loading="lazy" src="logo/recycle.jpg">
+                   </div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.acbk.kz/">
+                   <h4>
+                     <pre>    АСБК              
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/acbk.jfif"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.instagram.com/lcoy_kazakhstan/">
+                   <h4>
+                     <pre>LCOY
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/lcoy.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.unsdsn.org/our-networks/kazakhstan/">
+                   <h4>
+                     <pre>SDSN
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/sdsn.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.usaid.gov/ru/central-asia-regional">
+                   <h4>
+                     <pre>USAID
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/usaid.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kaz-waste.kz/">
+                   <h4>
+                     <pre>Kazwaste
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/kazwaste.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://plastnet.kz/">
+                   <h4>
+                     <pre>Plastnet
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/plastnet.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://impacthubalmaty.net/">
+                   <h4>
+                     <pre>Impacthub
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/impacthub.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kazakhstan.fes.de/">
+                   <h4>
+                     <pre>FES
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/fes.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.eurasia.org/who-we-are/eurasia-foundation-of-central-asia/">
+                   <h4>
+                     <pre>Eurasia
+     Foundation</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/EF.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.instagram.com/climate.centralasia/">
+                   <h4>
+                     <pre>CAICA
+       </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/caica.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://open-almaty.kz/">
+                   <h4>
+                     <pre>Open
+     Almaty</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/open_alma.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.gov.kz/memleket/entities/almaty?lang=en">
+                   <h4>
+                     <pre>Akimat
+     Almaty</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/almaty.jpeg"></div>
+                 </a>
+               </div>
+     
+              <div class="swiper-slide partner " id="series">
+               <a href="">
+                 <h4> 
+                   <pre>  
+     Almaty</pre>  
+                 </h4>
+                 <div class="kartinka"><img loading="lazy" src="logo/alma.jpg"></div>
+               </a>
+             </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kameda.kz/">
+                   <h4>
+                     <pre>Kameda
+     PF</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="logo/kameda.jpg"></div>
+                 </a>
+               </div>
+        </div>
+        <div class="swiper-pagination">
+        </div>
+      </div>
+    </div>-->
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/09e0948662.js" crossorigin="anonymous"></script>
+  <!--=============== MAIN JS ===============-->
+  <script src="main.js"></script>
+  <script>
+    let card = document.querySelector(".card")
+    card.addEventListener("click", function () {
+      card.classList.toggle("rotated");
+    })
+  </script>
+</body>
+
+<footer>
+  <div class="info-wrapper">
+    <div class="info" style="text-align: center">
+      <a href="https://kazstat.github.io/sdg-site-kazstat/ru/" target="_blank"><img loading="lazy" src="logo/sdg.png"
+          style="width: 7.5rem" /></a>
+      <div class="social">
+        <a href="https://vk.com/zhasik0007" target="_blank">
+          <span class="vk">
+            <i aria-hidden="true" class="vk fab fa-vk"></i>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/jastyq_korpeshka/" target="_blank">
+          <span class="insta">
+            <i aria-hidden="true" class="fab fa-instagram"></i>
+          </span>
+        </a>
+        <a href="https://wa.me/77051327714" target="_blank">
+          <span class="whats">
+            <i aria-hidden="true" class="fab fa-whatsapp"></i>
+          </span>
+        </a>
+        <a href="https://t.me/jastyq_korpeshka" target="_blank">
+          <span class="telega">
+            <i aria-hidden="true" class="fab fa-telegram"></i>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/jastyq-korpeshka/" target="_blank">
+          <span class="linkedin">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </span>
+        </a>
+      </div>
+      <div>
+        <p>© 2024, jastyq_korpeshka</p>
+      </div>
+    </div>
+    <div class="info">
+      <h3>
+        <a href="zhasulan.html" style="text-decoration: none;">Обо мне</a>
+      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.unicef.org/kazakhstan/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/%D0%BA%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B5%D0%B6%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D0%B5%D1%82-%D0%B8%D0%BD%D0%BD%D0%BE%D0%B2%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%8D%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC">Проекты
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://orda.kz/sdavali-musor-i-zabirali-kotjat-v-almaty-proshla-jekoakcija-recycle-birge-387534/">СМИ</a>
+        </li>
+        <li><a href="https://drive.google.com/file/d/1oWkrbC4nMZsQ50kiSIfIsYB7_H9zDqHd/view?usp=sharing ">Достижения</a>
+        </li>
+        <li>Галерея</li>
+      </ul>
+    </div>
+    <div class="info">
+      <h3 id="contacts">Контакты</h3>
+      <ul>
+        <li>
+          <a href="https://2gis.kz/astana/geo/9570771978420226" target="_blank">
+            <i aria-hidden="" class="fa fa-map-marker-alt"></i>&nbsp; Астана, Казахстан
+          </a>
+        </li>
+        <li>
+          <a href="Zhasulan Toleubekov.vcf">
+            <i aria-hidden="true" class="fa fa-phone"></i>&nbsp;+7 705 132 77 14
+          </a>
+        </li>
+        <li>
+          <a href="mailto:zhaszhasulan35@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>&nbsp; zhaszhasulan35.gmail
+          </a>
+        </li>
+        <li>
+          <a href="https://qazvolunteer.kz/kk/volunteers/62022" target="_blank">
+            <i class="fas fa-hand-holding-heart"></i> &nbsp;qazvolunteer.kz
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="info" style="text-align: center">
+      <a href="https://kazakhstan.un.org/ru" target="blank"> <img src="logo/unmission.png" style="width: 7.5rem" /></a>
+      <div class="social">
+        <a href="https://open.spotify.com/user/317be2jr6gbpuscej2vk5sldde2m?si=bd07db8ed04646ee" target="_blank">
+          <span class=" spotify">
+            <i aria-hidden="true" class="fab fa-spotify"></i>
+          </span>
+        </a>
+        <a href="https://www.strava.com/athletes/jastyq_korpeshka" target="_blank">
+          <span class="icon strava">
+            <i aria-hidden="true" class="fab fa-strava"></i>
+          </span>
+        </a>
+        <a href="https://github.com/Zhaik007" target="_blank">
+          <span class="icon github">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </span>
+        </a>
+        <a href="https://www.chess.com/member/tj_009" target="_blank">
+          <span class="icon chess">
+            <i class="fa-solid fa-chess-pawn"></i>
+          </span>
+        </a>
+        <a href="https://www.youtube.com/@zhasulantoleubekov931" target="_blank">
+          <span class="icon utube">
+            <i aria-hidden="true" class="fab fa-youtube"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>
