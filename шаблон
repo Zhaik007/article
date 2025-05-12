@@ -59,6 +59,53 @@
         </p>
 
 
+/*=============== LANG MENU ===============*/
+// var drop = document.querySelector("#langdrop");
+// var dropbtn = document.querySelector("#cdrop");
+
+// let el = drop.querySelectorAll("li");
+// el.forEach((elem) => {
+//   let p = elem.querySelector("p");
+//   elem.addEventListener("click", function update_country(elem) {
+//     dropbtn.innerHTML =
+//       p.innerText + `<i class="ri-arrow-down-s-line dropdown__arrow"></i>`;
+//   });
+// });
+
+// const partners = new Swiper(".org-wrapper", {
+//   direction: "horizontal",
+//   loop: true,
+//   grabCursor: true,
+//   spaceBetween: 40,
+//   autoplay: {
+//     delay: 5000,
+//   },
+
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     dynamicBullets: true,
+//   },
+
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   breakpoints: {
+//     300: {
+//       slidesPerView: 3,
+//     },
+//     768: {
+//       slidesPerView: 5,
+//       spaceBetween: 30,
+//     },
+//     1024: {
+//       slidesPerView: 6,
+//       spaceBetween: 20,
+//     },
+//   },
+// });
 
 
             <!-- 
@@ -102,3 +149,292 @@
               </li>
             </ul>
           </li> -->
+
+
+
+
+<!--<section>
+    <h1 style="display:block;font-size:2rem;text-align:center;">Проект поддержали</h1>
+    <div class="swiper">
+      <div class="org-wrapper">
+        <div class="news-wrapper swiper-wrapper">
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ecosen.kz/">
+              <h4>
+                <pre>Ecosen
+                       </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/ecosen.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.undp.org/ru/kazakhstan">
+              <h4>
+                <pre>UNDP
+                   </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/undp.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ecocashback.kz/">
+              <h4>
+                <pre>Eco
+     cashback</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/ecocashback.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://ekofond.kz/">
+              <h4>
+                <pre>ОФ ЭкоФонд
+                       </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/ecofond.jfif"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.linkedin.com/company/united-central-asian-professional-ucap/">
+              <h4>
+                <pre>UCAP
+     team</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/ucap.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://econetwork.green/">
+              <h4>
+                <pre>Eco
+     Network</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/econetwork.png"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.unicef.org/kazakhstan/">
+              <h4>UNICEF Kazakhstan</h4>
+              <div class="kartinka"><img loading="lazy" src="images/unicef.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.instagram.com/youth4climatekz/">
+              <h4>Youth for Climate</h4>
+              <div class="kartinka"><img loading="lazy" src="images/youtclimate.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://www.instagram.com/p/C_95jgTC_ih/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+              <h4>
+                <pre>Департамент
+     Экологии</pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/department.jpg"></div>
+            </a>
+          </div>
+
+          <div class="swiper-slide partner " id="series">
+            <a href="https://taplink.cc/taza.likee">
+              <h4>
+                <pre>  Taza.likee
+        </pre>
+              </h4>
+              <div class="kartinka"><img loading="lazy" src="images/tazalike.jpg"></div>
+            </a>
+          </div>
+           
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://recyclebirge.kz/">
+                   <h4>Recycle birge</h4>
+                   <div class="kartinka">
+                     <img loading="lazy" src="images/recycle.jpg">
+                   </div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.acbk.kz/">
+                   <h4>
+                     <pre>    АСБК              
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/acbk.jfif"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.instagram.com/lcoy_kazakhstan/">
+                   <h4>
+                     <pre>LCOY
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/lcoy.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.unsdsn.org/our-networks/kazakhstan/">
+                   <h4>
+                     <pre>SDSN
+                     </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/sdsn.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.usaid.gov/ru/central-asia-regional">
+                   <h4>
+                     <pre>USAID
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/usaid.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kaz-waste.kz/">
+                   <h4>
+                     <pre>Kazwaste
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/kazwaste.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://plastnet.kz/">
+                   <h4>
+                     <pre>Plastnet
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/plastnet.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://impacthubalmaty.net/">
+                   <h4>
+                     <pre>Impacthub
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/impacthub.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kazakhstan.fes.de/">
+                   <h4>
+                     <pre>FES
+                   </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/fes.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.eurasia.org/who-we-are/eurasia-foundation-of-central-asia/">
+                   <h4>
+                     <pre>Eurasia
+     Foundation</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/EF.png"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.instagram.com/climate.centralasia/">
+                   <h4>
+                     <pre>CAICA
+       </pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/caica.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://open-almaty.kz/">
+                   <h4>
+                     <pre>Open
+     Almaty</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/open_alma.jpg"></div>
+                 </a>
+               </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://www.gov.kz/memleket/entities/almaty?lang=en">
+                   <h4>
+                     <pre>Akimat
+     Almaty</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/almaty.jpeg"></div>
+                 </a>
+               </div>
+     
+              <div class="swiper-slide partner " id="series">
+               <a href="">
+                 <h4> 
+                   <pre>  
+     Almaty</pre>  
+                 </h4>
+                 <div class="kartinka"><img loading="lazy" src="images/alma.jpg"></div>
+               </a>
+             </div>
+     
+               <div class="swiper-slide partner " id="series">
+                 <a href="https://kameda.kz/">
+                   <h4>
+                     <pre>Kameda
+     PF</pre>
+                   </h4>
+                   <div class="kartinka"><img loading="lazy" src="images/kameda.jpg"></div>
+                 </a>
+               </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    </section>
+    
+    
+    
+    <a class="swiper-slide news " id="songs" href="">
+              <h3 title="Читать далее…">…</h3>
+              <div class="kartinka"> <img loading="lazy" src="" alt=""> </div>
+              <p>…</p>
+            </a>
+
+            <a class="swiper-slide news " id="tragedy" href="">
+              <h3 title="Читать далее…">…</h3>
+              <div class="kartinka"> <img loading="lazy" src="" alt="" > </div>
+              <p>…</p>
+            </a>
+
+            <a class="swiper-slide news " id="tragedy" href="">
+              <h3 title="Читать далее…">…</h3>
+              <div class="kartinka"> <img loading="lazy" src="" alt="" > </div>
+              <p></p>
+            </a>
+
+            <a class="swiper-slide news " id="ecorg" href="">
+              <h3 title="Читать далее…">…</h3>
+              <div class="kartinka"> <img loading="lazy" src="" alt=""> </div>
+              <p>…</p>
+            </a>
+    -->
+
+    <video class="corobka" preload="none" title=""
+          poster="images/preview/" controls="" style="object-fit:cover; width:100%;">
+          <source src="https://disk.reo.ru/f/ffba647a56e444ae87d9/?dl=1" type="video/mp4">
+        </video>
