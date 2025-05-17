@@ -4,6 +4,30 @@ document.addEventListener("copy", function (event) {
     "Подборка экологических мультфильмов Толеубекова Жасулана 🔗 - https://zhaik007.github.io/article/"
   );
 });
+
+
+document.querySelectorAll('.share-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    handleShare(btn)
+  })
+})
+
+async function handleShare(btn) {
+  const shareData = {
+    text: btn.dataset.title,
+    url: btn.dataset.src,
+  };
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else {       // Fallback: Copy to clipboard + alert
+      await navigator.clipboard.writeText(shareData.url);
+      alert('Link copied to clipboard! 📋\nPaste it anywhere to share.');
+    }
+  } catch (err) {
+    console.error('Share failed:', err);
+  }
+}
 /*=============== SHOW MENU ===============*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),

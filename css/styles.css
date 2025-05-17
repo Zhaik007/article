@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --header-height: 3.5rem;
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -60,6 +67,7 @@ ul {
 a {
   text-decoration: none;
   transition: 0.2s;
+  color:#000;
 }
 .author {
   color: #656464;
@@ -81,17 +89,17 @@ article h2 {
   font-size: 1.5rem;
 }
 
-h4 {
-  padding: 10px;
+h3 {
+  padding: 1rem;
 }
 
-p,h3 {
-  padding: 10px 0;
-  /* width: inherit; */
+p{
+  padding: 1rem 0;
+  line-height: 1.4rem;
 }
 
 hr {
-  margin: 20px 0;
+  margin: .5rem 0;
   width: 100%;
 }
 
@@ -111,7 +119,6 @@ hr {
 .hidden {
   display: none;
 }
-
 .unhidden {
   display: contents;
 }
@@ -166,8 +173,7 @@ main {
   .news {
     width: 100%;
   }
-  .kart,
-  .kart_open {
+  .kart,.kart_open {
     width: 100%;
   }
   .kart .social,
@@ -256,8 +262,7 @@ main {
   max-width: 30%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-next,.swiper-button-prev {
   opacity: 0.3;
   width: 5px;
   height: 40px;
@@ -283,7 +288,7 @@ main {
   margin-inline: 1.5rem;
 }
 
-iframe,.corobka,.corobka button{
+iframe,.corobka,.corobka .play-btn{
   width: 100%;
   aspect-ratio: 16 / 9;
 }
@@ -298,24 +303,55 @@ iframe,.corobka,.corobka button{
   background-color: transparent;
 }
 
-.corobka button {
-  height: 100%;
-  background: none;
+.corobka button,.corobka a{
   border: none;
   position: absolute;
-  top: 0;
-  left: 0;
   cursor: pointer;
   padding: 0;
+  
+}
+.corobka .play-btn {
+  height: 100%;
+  background: none;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.2s;
+  
 }
-
-.corobka button svg{
+.corobka .play-btn svg{
     width:64px;
     height:48px;
+    fill:#f03;
+}
+.corobka > .play-btn path:last-child,.share-btn,.open-btn{
+    fill:#fff;
+}
+.corobka .share-btn{
+  top: 0;
+  right: 0;
+  border-radius: 0 .6rem;
+}
+.corobka .share-btn svg{
+   width:2.8rem;
+   height:2.5rem;
+}
+.share-btn,.open-btn{
+    background-color: #00000098;
+}
+.corobka .open-btn{
+  bottom: 0;
+  right: 0;
+  border-radius: .6rem 0;
+}
+.corobka .open-btn {
+   width:12rem;
+   height:2.5rem;
+   display: flex;
+   align-items: center;
+   color:#fff;
+   padding: 10px;
 }
 
 .corobka img {
@@ -347,8 +383,7 @@ iframe,.corobka,.corobka button{
   font-weight: initial;
   transition: transform 0.4s;
 }
-.dropdown__link,
-.dropdown__sublink {
+.dropdown__link,.dropdown__sublink {
   padding: 0.3rem;
   color: #fff;
   background-color: #28abfd;
@@ -359,20 +394,17 @@ iframe,.corobka,.corobka button{
   transition: background-color 0.3s;
 }
 
-.dropdown__link i,
-.dropdown__sublink i {
+.dropdown__link i,.dropdown__sublink i {
   font-size: 1.25rem;
   font-weight: initial;
   font-family: "Font Awesome 6 Free";
 }
 
-.dropdown__link:hover,
-.dropdown__sublink:hover {
+.dropdown__link:hover,.dropdown__sublink:hover {
   background-color: rgb(70, 184, 255);
 }
 
-.dropdown__menu,
-.dropdown__submenu {
+.dropdown__menu,.dropdown__submenu {
   max-height: 1100px;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
@@ -397,11 +429,7 @@ iframe,.corobka,.corobka button{
 .dropdown__sublink {
   background-color: #28abfd;
 }
-
 /*=============== NAV ===============*/
-.nav__link {
-  font-family: "Montserrat", sans-serif;
-}
 
 .nav__burger,.nav__close {
   fill: #fff;
@@ -431,11 +459,9 @@ iframe,.corobka,.corobka button{
   position: relative;
   width: 2rem;
   height: 2rem;
-
 }
 
-.nav__burger,
-.nav__close {
+.nav__burger,.nav__close {
   position: absolute;
   width: max-content;
   height: max-content;
@@ -452,7 +478,6 @@ iframe,.corobka,.corobka button{
   display: none;
 }
 
-/* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
   .plus {
     display: contents;
@@ -468,11 +493,9 @@ iframe,.corobka,.corobka button{
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
   }
-
   .show-menu {
     height: 90vh;
   }
-
   .nav__menu::-webkit-scrollbar {
     width: 0;
     display: none;
@@ -516,42 +539,27 @@ iframe,.corobka,.corobka button{
     height: calc(var(--header-height) + 3rem);
     font-size: 1.5rem;
   }
-
   .nav img {
     width: 6rem;
   }
-
-  .dropdown__sublink,
-  .nav__link,
-  .dropdown__link,
-  .dropdown__sublink,
-  .nav__list {
+  .dropdown__sublink,.nav__link,.dropdown__link,.dropdown__sublink,.nav__list, .dropdown__item  {
     background-color: rgb(21, 25, 40);
   }
-
   .navlist {
     height: calc(100vh - var(--header-height)-3.4rem);
-  }
-
-  .dropdown__item {
-    background-color: rgb(21, 25, 40);
   }
   .nav__link:hover {
     background-color: #39b3ff;
   }
-
   .dropdown__link {
     margin-left: 1rem;
   }
-
   .dropdown__sublink {
     margin-left: 2rem;
   }
-
   .dropdown__item:hover .dropdown__menu {
     display: contents;
   }
-
   .language {
     display: none;
   }
@@ -570,9 +578,7 @@ iframe,.corobka,.corobka button{
   .nav__link {
     padding-inline: 1rem;
   }
-  .nav__link:hover,
-  .dropdown__link:hover,
-  .dropdown__sublink:hover {
+  .nav__link:hover,.dropdown__link:hover,.dropdown__sublink:hover {
     background-color: #39b3ff;
   }
   .article {
@@ -632,8 +638,7 @@ iframe,.corobka,.corobka button{
     transition: opacity 0.3s, top 0.3s;
   }
 
-  .dropdown__link,
-  .dropdown__sublink {
+  .dropdown__link,.dropdown__sublink {
     padding-inline: 1rem 2rem;
   }
 
@@ -649,8 +654,7 @@ iframe,.corobka,.corobka button{
     height: 35vh;
   }
 
-  .dropdown__subitem:hover .plus,
-  .dropdown__item i#hp {
+  .dropdown__subitem:hover .plus,.dropdown__item i#hp {
     display: none;
   }
 
@@ -669,10 +673,6 @@ iframe,.corobka,.corobka button{
     pointer-events: initial;
     transition: top 0.3s;
   }
-}
-
-.dropdown__menu i {
-  font-family: "Font Awesome 6 Free";
 }
 
 .grid {
@@ -745,7 +745,7 @@ iframe,.corobka,.corobka button{
   transition: 0.5s;
 }
 
-.news h4,.news p {
+.news h3,.news p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -756,9 +756,7 @@ iframe,.corobka,.corobka button{
   max-width: 150px;
 }
 
-.partner a,
 .kart {
-  text-decoration: none;
   color: #000;
 }
 
@@ -826,8 +824,7 @@ ol li {
   padding: 1rem;
 }
 
-.more i,
-.more {
+.more i,.more {
   border-radius: 5px;
   color: #06b0ff;
   cursor: pointer;

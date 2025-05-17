@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jastyq_korpeshka</title>
+  <link rel="icon" href="../images/logo.png" type="image/icon type" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Подборка аниме в которых затрагивалась тема экологии" />
+  <meta name="author" content="Zhassulan Toleubekov">
+  <meta name="theme-color" content="#28abfd" />
+  <meta property="og:title" content="jastyq_korpeshka" />
+  <meta property="og:type" content="Ecological education" />
+  <meta property="og:url" content="https://zhaik007.github.io/article/" />
+  <meta property="og:image" content="../images/eve.jpg" />
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/swiper.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav ">
+      <div class="nav__data">
+        <a href="https://www.instagram.com/jasyl_kenistik/" class="nav__logo">
+          <img src="../images/Лого.avif" alt="Go to Instagram page">
+        </a>
+        <div class="nav__toggle" id="nav-toggle">
+          <svg class="nav__burger ri-menu-line" viewBox="0 0 24 24" role="button">
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+          <svg class="ri-close-line nav__close" viewBox="0 0 24 24" role="button">
+            <path
+              d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
+            </path>
+          </svg>
+        </div>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Главная</a></li>
+          <li><a href="../html/zhasulan.html" class="nav__link">Обо мне</a></li>
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <a href="#collect" class="nav__link">
+              Подборки <svg viewBox="0 0 24 24" class="ri-arrow-down-s-line dropdown__arrow" role="img">
+                <path
+                  d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                </path>
+              </svg>
+            </a>
+            <ul class="dropdown__menu ">
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem ">
+                <div class="dropdown__link">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path
+                      d="M4 5H20V3H4V5ZM20 9H4V7H20V9ZM9 13H15V11H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V11H9V13Z">
+                    </path>
+                  </svg>Медиатека
+                </div>
+                <ul class="dropdown__submenu ">
+                  <li>
+                    <a href="../html/babies.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M7 11C4.51472 11 2.5 8.98528 2.5 6.5C2.5 4.01472 4.51472 2 7 2C9.48528 2 11.5 4.01472 11.5 6.5C11.5 8.98528 9.48528 11 7 11ZM17.5 15C15.2909 15 13.5 13.2091 13.5 11C13.5 8.79086 15.2909 7 17.5 7C19.7091 7 21.5 8.79086 21.5 11C21.5 13.2091 19.7091 15 17.5 15ZM17.5 16C19.9853 16 22 18.0147 22 20.5V21H13V20.5C13 18.0147 15.0147 16 17.5 16ZM7 12C9.76142 12 12 14.2386 12 17V21H2V17C2 14.2386 4.23858 12 7 12Z">
+                        </path>
+                      </svg>Для детей
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/ecokids.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M13 21V23.5L10 21.5L7 23.5V21H6.5C4.567 21 3 19.433 3 17.5V5C3 3.34315 4.34315 2 6 2H20C20.5523 2 21 2.44772 21 3V20C21 20.5523 20.5523 21 20 21H13ZM7 19V17H13V19H19V16H6.5C5.67157 16 5 16.6716 5 17.5C5 18.3284 5.67157 19 6.5 19H7ZM7 5V7H9V5H7ZM7 8V10H9V8H7ZM7 11V13H9V11H7Z">
+                        </path>
+                      </svg>Познавательные
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../index.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 11C10 11 8.33333 11.3333 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C15.6667 11.3333 14 11 12 11ZM8.5 7C7.34792 7 6.37786 7.77929 6.08818 8.8395L6.04989 9.00057H10.9501C10.7187 7.85917 9.70968 7 8.5 7ZM15.5 7C14.3479 7 13.3779 7.77929 13.0882 8.8395L13.0499 9.00057H17.9501C17.7187 7.85917 16.7097 7 15.5 7Z">
+                        </path>
+                      </svg> Для подростков
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/teach.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M12 2 0 9 12 16 22 10.1667V17.5H24V9L12 2ZM3.99902 13.4905V18.0001C5.82344 20.429 8.72812 22.0001 11.9998 22.0001 15.2714 22.0001 18.1761 20.429 20.0005 18.0001L20.0001 13.4913 12.0003 18.1579 3.99902 13.4905Z">
+                        </path>
+                      </svg> Образовательные
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/films.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M11 14.0619V20H13V14.0619C16.9463 14.554 20 17.9204 20 22H4C4 17.9204 7.05369 14.554 11 14.0619ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z">
+                        </path>
+                      </svg> Для взрослых
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/short.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM4 5V7H6V5H4ZM18 5V7H20V5H18ZM4 9V11H6V9H4ZM18 9V11H20V9H18ZM4 13V15H6V13H4ZM18 13V15H20V13H18ZM4 17V19H6V17H4ZM18 17V19H20V17H18Z">
+                        </path>
+                      </svg> Короткометражные
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/anime.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM10.6219 8.41459C10.5562 8.37078 10.479 8.34741 10.4 8.34741C10.1791 8.34741 10 8.52649 10 8.74741V15.2526C10 15.3316 10.0234 15.4088 10.0672 15.4745C10.1897 15.6583 10.4381 15.708 10.6219 15.5854L15.5008 12.3328C15.5447 12.3035 15.5824 12.2658 15.6117 12.2219C15.7343 12.0381 15.6846 11.7897 15.5008 11.6672L10.6219 8.41459Z">
+                        </path>
+                      </svg> Аниме
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/kazakh.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M3 3H12.382C12.7607 3 13.107 3.214 13.2764 3.55279L14 5H20C20.5523 5 21 5.44772 21 6V17C21 17.5523 20.5523 18 20 18H13.618C13.2393 18 12.893 17.786 12.7236 17.4472L12 16H5V22H3V3Z">
+                        </path>
+                      </svg> Отечественные
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/podcasts.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z">
+                        </path>
+                      </svg> Подкасты
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../html/movies.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M17.9981 7L20.3075 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H5.99807L3.68867 7H5.99807L8.30747 3H11.9981L9.68867 7H11.9981L14.3075 3H17.9981L15.6887 7H17.9981Z">
+                        </path>
+                      </svg> Мультфильмы
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="../html/promo.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M7.55197 13 8.39897 10.8852 9.24398 13H7.55197ZM16 12H17V14H16C15.4477 14 15 13.5523 15 13 15 12.4477 15.4477 12 16 12ZM21 3H3C2.44772 3 2 3.44772 2 4V20C2 20.5523 2.44772 21 3 21H21C21.5523 21 22 20.5523 22 20V4C22 3.44772 21.5523 3 21 3ZM12.598 16H10.443L10.043 15H6.75297L6.35297 16H4.19897L5.39797 13.002 5.39897 13 7.39897 8H9.39897L12.598 16ZM17 8H19V16H16C14.3431 16 13 14.6569 13 13 13 11.3431 14.3431 10 16 10H17V8Z">
+                        </path>
+                      </svg> Промо ролики
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="../html/soviet.html" class="dropdown__sublink">
+                      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path
+                          d="M13.4144 5H20.0002C20.5525 5 21.0002 5.44772 21.0002 6V7H3.00017V4C3.00017 3.44772 3.44789 3 4.00017 3H11.4144L13.4144 5ZM3.08697 9H20.9134C21.4657 9 21.9134 9.44772 21.9134 10C21.9134 10.0277 21.9122 10.0554 21.9099 10.083L21.0766 20.083C21.0334 20.6013 20.6001 21 20.08 21H3.9203C3.40021 21 2.96695 20.6013 2.92376 20.083L2.09042 10.083C2.04456 9.53267 2.45355 9.04932 3.00392 9.00345C3.03155 9.00115 3.05925 9 3.08697 9Z">
+                        </path>
+                      </svg> Старые мультики
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path
+                      d="M12 10C14.2091 10 16 8.20914 16 6 16 3.79086 14.2091 2 12 2 9.79086 2 8 3.79086 8 6 8 8.20914 9.79086 10 12 10ZM5.5 13C6.88071 13 8 11.8807 8 10.5 8 9.11929 6.88071 8 5.5 8 4.11929 8 3 9.11929 3 10.5 3 11.8807 4.11929 13 5.5 13ZM21 10.5C21 11.8807 19.8807 13 18.5 13 17.1193 13 16 11.8807 16 10.5 16 9.11929 17.1193 8 18.5 8 19.8807 8 21 9.11929 21 10.5ZM12 11C14.7614 11 17 13.2386 17 16V22H7V16C7 13.2386 9.23858 11 12 11ZM5 15.9999C5 15.307 5.10067 14.6376 5.28818 14.0056L5.11864 14.0204C3.36503 14.2104 2 15.6958 2 17.4999V21.9999H5V15.9999ZM22 21.9999V17.4999C22 15.6378 20.5459 14.1153 18.7118 14.0056 18.8993 14.6376 19 15.307 19 15.9999V21.9999H22Z">
+                    </path>
+                  </svg> Экосообщества
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path
+                      d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z">
+                    </path>
+                  </svg> Экоактивисты
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" class="nav__link">Материалы</a></li>
+          <li><a href="../html/visitka.html" class="nav__link" target="">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="article">
+    <section>
+      <div style="display: flex; justify-content: center; align-items: center">
+        <svg height="25" width="25" role="img" aria-hidden="true">
+          <path
+            d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z">
+          </path>
+        </svg>
+        <span>&nbsp; Подборка </span>
+      </div>
+      <h1>10 аниме с эко-подтекстом</h1>
+      <a class="author" href="https://www.instagram.com/jastyq_korpeshka/" title="Автор подборки">Толеубеков Жасулан</a>
+      <article>
+        <h2>Принцесса Мононоке (1997) - 2 ч 14 мин (12+) </h2>
+        <div class="sdg-wrapper">
+           <img class="sdg" src="../images/sdg/15.png" alt="SDG15" /> 
+           <img class="sdg" src="../images/sdg/16.png" alt="SDG16" /> 
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/mononoke.webp" aria-hidden="true" fetchpriority="high">
+          <button class="play-btn" data-title="Принцесса Мононоке (1997) - 2 ч 14 мин (12+)" data-src="https://www.youtube.com/embed/PQ8TTT8jjWc?si=nvHBCGp5gtzEN5Lx&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path
+                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Противостояние природы и людей</li>
+        </ul>
+         <p>
+          Убив разьяренного вепря, юный принц Аситака навлек на себя смертельное проклятие. Старая 
+          знахарка предсказала, что только он сам способен изменить свою судьбу, и 
+          отважный воин отправился в опасное путешествие
+        </p>
+        <p>
+          Так он оказался в загадочной стране, где люди воевали с обитателями леса: духами,
+          демонами и гигантскими существами, каких Аситака раньше никогда не видел. И была 
+          с ними принцесса Мононоке - повелительница зверей и дочь волчицы. Теперь судьба 
+          всех зависит только от одного воина - принца Аситаки
+        </p>
+      </article>
+      <article>
+        <h2>Навсикая из долины ветров (1984) - 1 ч 57 мин (16+) </h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/15.png" alt="SDG15" /> 
+          <img class="sdg" loading="lazy" src="../images/sdg/16.png" alt="SDG16" />
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/navsikaya.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="" data-src="https://www.youtube.com/embed/el0MsKQqS9c?si=zrWL_HGXHLOMgVV8&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Ядерная война</li>
+          <li>Постапокалипсис</li>
+        </ul>
+        <p>
+          После ядерной войны Землю постигла ужасная экологическая катастрофа. Поверхность планеты почти
+          целиком покрывают леса, испускающие в атмосферу ядовитые споры. Оставшиеся в живых люди живут в
+          зонах, ещё не покрытых лесами, и периодически сталкиваются с чудовищными насекомообразными монстрами
+        </p>
+        <p>
+          Долина ветров — одно из царств, образовавшихся на руинах прежних государств. Им 
+          управляет отважная принцесса Навсикая. Но мирное существование Долины ветров 
+          нарушается, когда воинственные соседи стремятся воссоздать опасное оружие, 
+          способное окончательно уничтожить планету
+        </p>
+        <p>
+          Сохранить хрупкий баланс природы и человека под
+          силу только доброй и отважной Навсикае, обладающей уникальным даром — находить 
+          общий язык с обитателями ядовитого Леса
+        </p>
+      </article>
+      <article>
+        <h2> Дитя погоды (2019) - 1 ч 42 мин (12+) </h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/13.png" alt="SDG13"/>
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/weathering.webp" aria-hidden="true" decoding="async"  loading="lazy">
+          <button class="play-btn" data-title="Дитя погоды (2019) - 1 ч 42 мин (12+)" data-src="https://www.youtube.com/embed/HqSAQHgYyn0?si=CvED6VuA5Cy4SSZi&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Ужесточившиеся погодные условия </li>
+          <li>Затопление Токио</li>
+        </ul>
+        <p>
+          Ученик старшей школы Ходака Морисима сбежал из дома на маленьком острове, перебравшись в шумный Токио.
+          Подростку удалось устроиться на работу в печатное агентство к Кэйсукэ Суги, который доверил ему писать статьи
+          о сверхъестественных явлениях
+        </p>
+        <p>
+          С самого переезда в столицу на улице постоянно шел дождь, критически
+          ограничивая свободу творчества. Главный герой случайно узнает, что за избыточным количеством атмосферных
+          осадков стоит несовершеннолетняя Хина Амано, которая невообразимым образом могла влиять на погоду
+        </p>
+        <p>
+          Они заводят крепкую дружбу и решают открыть свой бизнес,
+          предоставляя горожанам солнечное или пасмурное небо на заказ
+        </p>
+      </article>
+      <article>
+        <h2>Император Джунглей Лео (1997) - 1 ч 39 мин</h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/15.png" alt="SDG15"/>
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/leo.webp" aria-hidden="true" decoding="async"  loading="lazy">
+          <button class="play-btn" data-title="Император Джунглей Лео (1997) - 1 ч 39 мин" data-src="https://www.youtube.com/embed/8gidGgeWYdc?si=QX-4A8B80PoqqnaU&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Браконьерство</li>
+        </ul>
+        <p>
+          Хэм Эгг нашел в джунглях Баджалу, как выясняется, этот камень на самом деле является «Лунным камнем», 
+          минералом, который можно использовать в качестве источника энергии и спасти мир 
+          от надвигающегося энергетического кризис. Научная организация обращается за помощью 
+          к Хэму Эггу, чтобы тот привел их к источнику Лунного камня…
+        </p>
+        <p>
+          У подножия мистической Лунной горы живет белый лев по имени Лео, правитель джунглей. 
+          Он и его семья живут мирно среди других животных и буйной растительности. 
+          Люди, вошедшие во владения Лео, разрушают мир своими безжалостными поисками 
+          «сияющих камней» - источника энергии. Животные, обеспокоены вторжением в их мирную жизнь, и Лео должен оказать им сопротивление
+        </p>
+      </article>
+      <article>
+        <h2> Рыбка Поньо на утесе (2008) - 1 ч 41 мин (8+)</h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" decoding="async"  src="../images/sdg/14.png" alt="SDG14"/>
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/ponio.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Рыбка Поньо на утесе (2008) - 1 ч 41 мин (8+)" data-src="https://www.youtube.com/embed/cuRBOR87KGE?si=6D2xr-8euKib-9-y&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Повышение уровня морей </li>
+        </ul>
+        <p>
+          История повествует о дружбе мальчика Сосукэ и рыбки Поньо, дочери колдуна и 
+          морской богини. Однажды любопытная Поньо уплывает из дома понаблюдать за людьми 
+          и, случайно оказывается выброшена на берег, где её подбирает Сосукэ. Маленькие 
+          герои обретают необъяснимую связь, они не могут пробыть без друг-друга и секунды,
+          хотя и не знают ничего о мире друг-друга
+        </p>
+      </article>
+         <article>
+        <h2>Спортивный сбор мусора: Товарищеский матч Кубка мира (2022) - 29 мин </h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/12.png" alt="SDG12" /> 
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/spogomi.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Спортивный сбор мусора: Товарищеский матч Кубка мира (2022) - 29 мин" data-src="https://www.youtube.com/embed/s6NkmWREhFU?si=aEcJ9rp22rlK7TT1&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Сбор мусора </li>
+          <li>Плоггинг</li>
+        </ul>
+        <p>
+          В ближайшем будущем, где экологические вызовы достигли критической точки, сбор мусора превратился в
+          увлекательный вид спортивных состязаний, сравнимый по своей популярности с чемпионатами по футболу.
+          Эти необычные соревнования, получившие название <i>Эко-Челлендж</i>, проводятся в различных уголках планеты и
+          привлекают внимание миллионов зрителей
+        </p>
+        <p>
+          Среди этих зрителей — Акари, обыкновенная школьница, которая с
+          восхищением следит за каждым матчем, транслируемым по телевизору. В центре внимания Акари — Токио, яркий и
+          харизматичный спортсмен из Японии, который не только демонстрирует выдающиеся способности в соревнованиях по
+          сбору мусора, но и вдохновляет молодёжь на участие в эко-инициативах
+        </p>
+        <p>
+          Однако, несмотря на всеобщую популярность <i>Эко-Челленджа</i>, родной город 
+          Акари сталкивается с серьезной проблемой: улицы завалены
+          отходами, и кажется, что энтузиазм соревнований не доходит до сердец и рук жителей
+        </p>
+        <p>
+          Акари решает собрать группу одноклассников для уборки своего района. Постепенно, благодаря
+          социальным сетям и местным СМИ, инициатива Акари привлекает всё больше внимания. С каждым днём к ней
+          присоединяется всё больше людей, желающих принести пользу своему городу и окружающей среде
+        </p>
+        <p>
+          Это движение,
+          зародившееся из маленькой искры надежды в сердце одной девушки, постепенно превращается в мощный пожар
+          перемен, доказывая, что даже в мире, где соревнования по сбору мусора стали вершиной популярности, настоящая
+          победа достигается не на арене, а в единении общества перед лицом экологических вызовов
+        </p>
+        <hr>
+        <p> Такие соревнования есть уже и в наши дни - <a href="https://cleangames.org/about" target="cleangames.org"><strong>Чистые игры</strong></a>
+        </p>
+      </article>
+      <article>
+        <h2>Спасите Семакау! (2019) </h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/../images/sdg/12.png" alt="SDG12" /> 
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/semakau.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Спасите Семакау! (2019)" data-src="https://www.youtube.com/embed/videoseries?si=NWs7b7Sqqz9eprrP&amp;list=PLPX9rYUbMZF3jKtflwo8iLj5ruguex_Tr&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Переработка</li> 
+          <li>Zero waste</li>
+        </ul>
+        <p>
+          Миранда пыталась научить своего брата Кевина правильно сдавать вторсырье на переработку. Она учит его
+          принципам 3R: сократить, использовать повторно и только в конце отправить на переработку. 
+          Сможет ли она заставить Кевина
+          изменить свои привычки?
+        </p>
+      </article>
+      <article>
+        <h2>Переработай (2023) - 4 мин </h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/12.png" alt="SDG12" />
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/resanime.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Переработай (2023) - 4 мин" data-src="https://www.youtube.com/embed/h4bpiHvWE_4?si=AzVVfo-fR6iYb9H4&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Переработка</li>
+        </ul>
+        <p>
+          Во время пробежки девушка
+          решила остановиться у торгового автомата, чтобы купить воды и отдохнуть.
+          Выпив воду, она пошла искать мусорный бак для пустой тары, но она не нашла его
+        </p>
+        <p>
+          В поисках урны она случайно наступила на хвост лежавщей на земле собаки
+          и ей пришлось убегать от разьяренной собаки.
+          В порыве гнева она бросила бутылку с водой, которую держала
+          в руке, на землю, и вскоре она пожалела о своем поступке…
+        </p>
+      </article>
+      <article>
+        <h2>Диоксиновое лето (2001) - 1 ч 21 мин (13+)</h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/3.png" alt="SDG3" /> 
+          <img class="sdg" loading="lazy" src="../images/sdg/15.png" alt="SDG15" />
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/dioxin.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Диоксиновое лето (2001) - 1 ч 21 мин (13+)" data-src="https://www.youtube.com/embed/qcESBEw-SB4?si=1pDOdkiNdqxerJcB&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Авария на заводе</li>
+          <li>Экологическая катастрофа</li>
+        </ul>
+        <p>
+          10 июля 1976 года, инцидент с имплантатом <i>ICMESA</i> провоцирует химические осадки над городом
+          Севезо, недалеко от Милана в Северной Италии. Огромное облако диоксина вырывается из поврежденного реактора,
+          падает на землю и вызывает одну из самых страшных экологических катастроф в истории
+        </p>
+        <p>
+          В течение нескольких дней корпорация <i>La Roche</i>, которой принадлежит завод, пытается минимизировать ущерб
+          инцидента, однако ни о чем не подозревающие жители Севезо продолжают
+          оставаться в своих домах, подвергаясь смертельному воздействию диоксина
+        </p>
+      </article>
+      <article>
+        <h2> Канта и Олень (1990) - 26 мин (8+)</h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/15.png" alt="SDG15" /> 
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/kanta.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="" data-src="https://www.youtube.com/embed/Rp5pj6HrPxQ?si=rFwF_fW4edC97CbW&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Браконьерство</li>
+        </ul>
+        <p>
+          Канта — городской мальчик, живущий в отдаленных горах Хоккайдо на севере Японии.
+          Однажды он подбирает осиротевшего из-за беспощадных охотников оленёнка с золотым
+          хвостом и называет его Пою. Канта развивает глубокое уважение к существам, которые
+          борются за выживание в таких суровых условиях холодной зимы и
+          клянётся защищать Пою и других оленей от охотников
+        </p>
+      </article>
+      <article>
+        <h2> Принцесса пустынного королевства (2001) - 26 мин (6+) </h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/6.png" alt="SDG6" />
+          <img class="sdg"loading="lazy" src="../images/sdg/16.png" alt="SDG16" /> 
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/desert.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Принцесса пустынного королевства (2001) - 26 мин (6+)" data-src="https://www.youtube.com/embed/1MRDDKmpwj4?si=GlRZRvlexhaRMVQX&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Нехватка воды</li>
+          <li>Конфликты</li>
+        </ul>
+        <p>
+          Когда источник, снабжающий водой королевство, иссекает, принцесса решает
+          отправиться в пустыню на поиски оазиса. Принцесса и ее спутники
+          сталкиваются со многими трудностями на своем пути, но они готовы на все чтобы спасти королевство от засухи
+        </p>
+      </article>
+      <article>
+        <h2> Принц и коралловое море (2000) - 26 мин (8+)</h2>
+        <div class="sdg-wrapper">
+          <img class="sdg" loading="lazy" src="../images/sdg/14.png" alt="SDG14" />
+          <img class="sdg" loading="lazy" src="../images/sdg/15.png" alt="SDG15" />
+        </div>
+        <div class="corobka">
+          <img src="../images/preview/coral.webp" aria-hidden="true" decoding="async" loading="lazy">
+          <button class="play-btn" data-title="Принц и коралловое море (2000) - 26 мин (8+)" data-src="https://www.youtube.com/embed/WLaHoo3aIBU?si=g4bRYUQWutHOHHu1&autoplay=1&mute=0" aria-label="Play YouTube video">
+            <svg viewBox="0 0 68 48" role="button">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f03"></path>
+              <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="theme">
+          <li>Эрозия почвы</li>
+          <li>Коралловые рифы</li>
+        </ul>
+        <p>
+          На острове Окинава мальчик по имени Рэй решает использовать волшебный дар русалки,
+          чтобы защитить природу и людей острова
+        </p> 
+        <hr id="collect">
+        <p>
+          <em >Принц и Коралловое море</em> основана на одноименной детской книге Дайсаку Икеды
+        </p>
+      </article>
+    </section>
+    <section>
+      <h2>Больше подобных подборок</h2>
+      <div class="swiper">
+        <div class="slider-wrapper">
+          <div class="news-wrapper swiper-wrapper">
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../index.html" aria-label="Go to animated series page">
+                <h3>20 анимационных сериалов …</h3>
+                <div class="kartinka">
+                  <img src="../images/posters/ben10.avif" loading="lazy" alt="Ben Ten poster" decoding="async">
+                </div>
+                <p>Герои нашего детсва… </p>
+                <audio src="../audio/ben10.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/movies.html" aria-label="Go to movies page">
+                <h3>30 полнометражных мультфильмов …</h3>
+                <div class="kartinka">
+                  <img loading="lazy" src="../images/posters/eva.jpg" alt="WALL-E and EVE holding the Plant"
+                    decoding="async">
+                </div>
+                <p>Все мы знаем про Валли… </p>
+                <audio src="../audio/wall.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/babies.html" aria-label="Go to page dedicated to children">
+                <h3>70 мультфильмов для малышей …</h3>
+                <div class="kartinka"> <img loading="lazy" src="../images/posters/children.avif"
+                    alt="Children in the circle holding hands" decoding="async">
+                </div>
+                <p>Всё начинается с детства…</p>
+                <audio src="../audio/UNICEF.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/short.html" aria-label="Go to shortfilms page">
+                <h3>85 короткометражных мультфильмов …</h3>
+                <div class="kartinka">
+                  <img loading="lazy" decoding="async" fetch-priority="low" src="../images/posters/ocean.avif"
+                    alt="Turtle representing Earth">
+                </div>
+                <p>Меньше чем за 30 минут…</p>
+                <audio src="../audio/purity.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group">
+              <a href="../html/promo.html" aria-label="Go to promo videos page">
+                <h3 title="Читать далее…">30 промо роликов различных компаний …</h3>
+                <div class="kartinka">
+                  <img loading="lazy" decoding="async" fetch-priority="low" src="../images/posters/lego.avif"
+                    alt="Lego house">
+                </div>
+                <p>Pepsico, LEGO и другие…</p>
+                <audio src="../audio/commercial.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Әрі қарай оқу…">
+              <a href="../html/kazakh.html" aria-label="Go to Kazakhstani video collection page">
+                <h3>Экология туралы 30 бейнероликтер…</h3>
+                <div class="kartinka"> <img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/kazakh.avif" alt="Smogliks / elfs"> </div>
+                <p>Қазақ тіліндегі табиғат…</p>
+                <audio src="../audio/aldar.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/anime.html" aria-label="Go to animated series page">
+                <h3>10 аниме с эко подтекстом…</h3>
+                <div class="kartinka"> <img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/mononoke.avif" alt="Princess Mononoke's mask">
+                </div>
+                <p>Шедевры студии Ghibli…</p>
+                <audio src="../audio/mononoke.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/teach.html" aria-label="Go to Educative channels page">
+                <h3>25 образовательных каналов…</h3>
+                <div class="kartinka"> <img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/earth-dot.avif" alt="Earth"> </div>
+                <p>Плейлисты посвященные…</p>
+                <audio src="../audio/Lofi.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/films.html" aria-label="Go to Films page">
+                <h3>70 фильмов с эко тематикой</h3>
+                <div class="kartinka"> <img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/film.avif" alt="Film roll"> </div>
+                <p>Никогда не поздно…</p>
+                <audio src="../audio/gentle.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/ecokids.html" aria-label="Go to page dedicated for kids">
+                <h3>50 роликов для детей с эко посылом</h3>
+                <div class="kartinka"> <img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/zeml.avif" alt="Earth"> </div>
+                <p>Образовательные ролики…</p>
+                <audio src="../audio/Childhood.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="news swiper-slide" role="group" title="Читать далее…">
+              <a href="../html/soviet.html" aria-label="Go to Old cartoons page">
+                <h3>25 мультфильмов детей из поколения Х …</h3>
+                <div class="kartinka"><img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/gena.avif" alt="Crocodile Gena and Cheburashka"> </div>
+                <p>Экология - дело общее…</p>
+                <audio src="../audio/gena.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+            <div class="swiper-slide news" role="group" title="Читать далее…">
+              <a href="../html/podcasts.html" aria-label="Go to podcasts page">
+                <h3>70 подкастов про экологию…</h3>
+                <div class="kartinka"> <img decoding="async" loading="lazy" fetch-priority="low"
+                    src="../images/posters/podcast.png" alt="Ecology without panicking"> </div>
+                <p>Слушайте где угодно…</p>
+                <audio src="../audio/podcast.mp3" preload="none" fetch-priority="low"></audio>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev" role="button"></div>
+          <div class="swiper-button-next" role="button"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/swiper.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+<footer>
+  <div class="info-wrapper">
+    <div class="info" style="text-align: center">
+      <a href="https://kazstat.github.io/sdg-site-kazstat/ru/" target="kazstat"><img loading="lazy"
+          src="../images/sdg.png" style="width: 7.5rem" alt="SDG wheel in Kazakh traditional style" /></a>
+      <address class="social">
+        <a href="https://vk.com/zhasik0007" target="vk.com" aria-label="Go to VK profile page">
+          <span class="vk">
+            <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <path
+                d="M31.5 63.5C0 95 0 145.7 0 247V265C0 366.3 0 417 31.5 448.5C63 480 113.7 480 215 480H233C334.3 480 385 480 416.5 448.5C448 417 448 366.3 448 265V247C448 145.7 448 95 416.5 63.5C385 32 334.3 32 233 32H215C113.7 32 63 32 31.5 63.5zM75.6 168.3H126.7C128.4 253.8 166.1 290 196 297.4V168.3H244.2V242C273.7 238.8 304.6 205.2 315.1 168.3H363.3C359.3 187.4 351.5 205.6 340.2 221.6C328.9 237.6 314.5 251.1 297.7 261.2C316.4 270.5 332.9 283.6 346.1 299.8C359.4 315.9 369 334.6 374.5 354.7H321.4C316.6 337.3 306.6 321.6 292.9 309.8C279.1 297.9 262.2 290.4 244.2 288.1V354.7H238.4C136.3 354.7 78 284.7 75.6 168.3z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/jastyq_korpeshka/" target="www.instagram.com"
+          aria-label="Go to Instagram profile page">
+          <span class="insta">
+            <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </svg>
+          </span>
+        </a>
+        <a href="https://wa.me/77051327714" target="api.whatsapp.com" aria-label="Go to WhatsApp chat">
+          <span class="whats">
+            <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://t.me/jastyq_korpeshka" target="telegram.org/" aria-label="Go to Telegram chat">
+          <span class="telega">
+            <svg viewBox="0 0 496 512" role="img" aria-hidden="true">
+              <path
+                d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/jastyq-korpeshka/" target="linkedin.com"
+          aria-label="Go to LinkedIn profile page">
+          <span class="linkedin">
+            <svg viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <path
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+            </svg>
+          </span>
+        </a>
+      </address>
+      <div>
+        <p>© 2024, jastyq_korpeshka</p>
+      </div>
+    </div>
+    <div class="info">
+      <h3>
+        <a href="../html/zhasulan.html" style="text-decoration: none;">Обо мне</a>
+      </h3>
+      <ul>
+        <li>
+          <a href="https://www.unicef.org/kazakhstan/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/%D0%BA%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B5%D0%B6%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D0%B5%D1%82-%D0%B8%D0%BD%D0%BD%D0%BE%D0%B2%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%8D%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC"
+            aria-label="Go to UNICEF Kazakhstan website">Проекты
+          </a>
+        </li>
+        <li>
+          <a href="https://orda.kz/sdavali-musor-i-zabirali-kotjat-v-almaty-proshla-jekoakcija-recycle-birge-387534/"
+            aria-label="Go to Orda.kz">СМИ</a>
+        </li>
+        <li><a href="https://drive.google.com/file/d/1oWkrbC4nMZsQ50kiSIfIsYB7_H9zDqHd/view?usp=sharing"
+            aria-label="Go to Google drive">Достижения</a>
+        </li>
+        <li>Галерея</li>
+      </ul>
+    </div>
+    <address class="info">
+      <h3 id="contacts">Контакты</h3>
+      <ul>
+        <li>
+          <a href="https://2gis.kz/astana/geo/9570771978420226" target="2gis.kz" aria-label="Go to 2GIS">
+            <svg viewBox="0 0 384 512" role="img" aria-hidden="true">
+              <path
+                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+            </svg> Астана, Казахстан
+          </a>
+        </li>
+        <li>
+          <a href="../docs/Zhasulan Toleubekov.vcf" aria-label="Download contact">
+            <svg viewBox="0 0 512 512" role="img" aria-hidden="true">
+              <path
+                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+            </svg> +7 705 132 77 14
+          </a>
+        </li>
+        <li>
+          <a href="mailto:zhaszhasulan35@gmail.com" target="gmail" aria-label="Go to Gmail">
+            <svg viewBox="0 -200 512 652" role="img" aria-hidden="true">
+              <path
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+            </svg>zhaszhasulan35.gmail
+          </a>
+        </li>
+        <li>
+          <a href="https://qazvolunteer.kz/kk/volunteers/62022" target="qazvolunteer.kz"
+            aria-label="Go to Qazvolunteer.kz profile page">
+            <svg viewBox="0 0 660 512" role="img" aria-hidden="true">
+              <path
+                d="M163 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z" />
+            </svg>qazvolunteer.kz
+          </a>
+        </li>
+      </ul>
+    </address>
+    <div class="info" style="text-align: center">
+      <a href="https://kazakhstan.un.org/ru" target="kazakhstan.un.org/ru"
+        aria-label="Go to un mission in Kazakhstan website"> <img src="../images/unmission.png"
+          alt="UN mission logo - Kazakhstan's flag fused with UN logotype" style="width: 7.5rem" /></a>
+      <div class="social">
+        <a href="https://open.spotify.com/user/317be2jr6gbpuscej2vk5sldde2m?si=bd07db8ed04646ee" target="spotify.com"
+          aria-label="Go to Spotify profile page">
+          <span class="spotify">
+            <svg viewBox="0 0 496 512" role="img" aria-hidden="true">
+              <path
+                d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://www.strava.com/athletes/jastyq_korpeshka" target="strava.com"
+          aria-label="Go to Strava profile page">
+          <span class="strava">
+            <svg viewBox="0 0 384 512" role="img" aria-hidden="true">
+              <path
+                d="M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://github.com/Zhaik007" target="github.com" aria-label="Go to Github">
+          <span class="github">
+            <svg viewBox="0 0 496 512" role="img" aria-hidden="true">
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://www.chess.com/member/tj_009" target="chess.com" aria-label="Go to Chess.com profile page">
+          <span class="chess">
+            <svg viewBox="0 0 320 512" role="img" aria-hidden="true">
+              <path
+                d="M215.5 224c29.2-18.4 48.5-50.9 48.5-88c0-57.4-46.6-104-104-104S56 78.6 56 136c0 37.1 19.4 69.6 48.5 88L96 224c-17.7 0-32 14.3-32 32c0 16.5 12.5 30 28.5 31.8L80 400l160 0L227.5 287.8c16-1.8 28.5-15.3 28.5-31.8c0-17.7-14.3-32-32-32l-8.5 0zM22.6 473.4c-4.2 4.2-6.6 10-6.6 16C16 501.9 26.1 512 38.6 512l242.7 0c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L256 432 64 432 22.6 473.4z" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://www.youtube.com/@zhasulantoleubekov931" target="youtube.com"
+          aria-label="Go to YouTube channel">
+          <span class="utube">
+            <svg viewBox="0 0 576 512" role="img" aria-hidden="true">
+              <path
+                d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
